@@ -252,27 +252,344 @@
   .hero .visual{display:grid}
 }
 
+
+
+/* requested update: lean collapsible experience timeline */
+.lean-timeline{
+  position:relative;
+  margin-top:6px;
+  border-radius:42px;
+  padding:18px 28px;
+  background:linear-gradient(145deg,rgba(255,255,255,.78),rgba(247,245,252,.7));
+  border:1px solid rgba(255,255,255,.82);
+  box-shadow:var(--shadow);
+  overflow:hidden;
+}
+.lean-timeline:before{
+  content:"";
+  position:absolute;
+  left:48px;
+  top:38px;
+  bottom:38px;
+  width:1px;
+  background:linear-gradient(180deg,rgba(129,112,216,.14),rgba(129,112,216,.54),rgba(185,217,245,.48),rgba(243,191,208,.24));
+}
+.lean-timeline:after{
+  content:"";
+  position:absolute;
+  right:-150px;
+  top:-170px;
+  width:430px;
+  height:330px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(184,168,255,.28),rgba(243,191,208,.1),transparent 72%);
+  pointer-events:none;
+}
+.lean-entry{
+  position:relative;
+  z-index:1;
+  display:grid;
+  grid-template-columns:42px minmax(0,1fr);
+  gap:14px;
+}
+.lean-entry+.lean-entry .lean-content{
+  border-top:1px solid var(--line);
+}
+.lean-marker{
+  position:relative;
+  display:grid;
+  justify-items:center;
+  padding-top:28px;
+}
+.lean-marker span{
+  width:13px;
+  height:13px;
+  border-radius:50%;
+  background:var(--accent);
+  box-shadow:0 0 0 7px rgba(129,112,216,.08),0 10px 24px rgba(36,40,76,.11);
+}
+.lean-trigger{
+  width:100%;
+  border:0;
+  background:transparent;
+  padding:24px 0;
+  cursor:pointer;
+  display:flex;
+  justify-content:space-between;
+  gap:18px;
+  text-align:left;
+  align-items:flex-start;
+}
+.lean-main{
+  display:block;
+  min-width:0;
+}
+.lean-title{
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:10px;
+  font-size:clamp(1.08rem,2.1vw,1.55rem);
+  line-height:1.18;
+  letter-spacing:-.035em;
+  color:var(--ink);
+  font-weight:850;
+}
+.lean-title em{
+  font-style:normal;
+  color:var(--accent);
+  font-weight:760;
+  letter-spacing:-.025em;
+}
+.lean-title b{
+  display:inline-flex;
+  align-items:center;
+  min-height:28px;
+  border-radius:999px;
+  padding:5px 11px;
+  background:rgba(129,112,216,.12);
+  border:1px solid rgba(129,112,216,.2);
+  color:#535986;
+  font-size:.78rem;
+  letter-spacing:0;
+  font-weight:820;
+}
+.lean-date{
+  display:block;
+  margin-top:9px;
+  color:#8b90ad;
+  font-size:.96rem;
+  line-height:1.35;
+}
+.lean-chevron{
+  flex:0 0 auto;
+  width:34px;
+  height:34px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  color:#8b90ad;
+  background:rgba(255,255,255,.6);
+  border:1px solid rgba(70,75,110,.1);
+  transition:.28s var(--ease);
+}
+.lean-entry.open .lean-chevron{
+  transform:rotate(180deg);
+  color:var(--accent);
+  border-color:rgba(129,112,216,.2);
+}
+.lean-body{
+  max-height:0;
+  overflow:hidden;
+  transition:max-height .42s var(--ease),padding .42s var(--ease),opacity .28s var(--ease);
+  opacity:0;
+}
+.lean-entry.open .lean-body{
+  max-height:680px;
+  padding-bottom:30px;
+  opacity:1;
+}
+.lean-detail{
+  position:relative;
+  margin-left:0;
+  padding:0 0 0 24px;
+  border-left:3px solid var(--accent);
+}
+.lean-kicker{
+  margin:0 0 10px;
+  font-size:.75rem;
+  text-transform:uppercase;
+  letter-spacing:.16em;
+  color:var(--lav);
+  font-weight:850;
+}
+.lean-detail p:not(.lean-kicker){
+  margin:0;
+  max-width:920px;
+  color:#303552;
+  line-height:1.72;
+  font-size:1.02rem;
+}
+.lean-entry.current .lean-marker span{
+  background:#11142b;
+  box-shadow:0 0 0 7px rgba(17,20,43,.08),0 0 0 14px rgba(129,112,216,.08),0 14px 30px rgba(17,20,43,.16);
+}
+@media(max-width:620px){
+  .lean-timeline{
+    border-radius:30px;
+    padding:8px 18px;
+  }
+  .lean-timeline:before{
+    left:32px;
+  }
+  .lean-entry{
+    grid-template-columns:28px minmax(0,1fr);
+    gap:10px;
+  }
+  .lean-marker{
+    padding-top:26px;
+  }
+  .lean-marker span{
+    width:11px;
+    height:11px;
+  }
+  .lean-trigger{
+    padding:22px 0;
+    gap:12px;
+  }
+  .lean-title{
+    font-size:1.08rem;
+    gap:7px;
+  }
+  .lean-title em{
+    flex-basis:100%;
+  }
+  .lean-date{
+    font-size:.86rem;
+  }
+  .lean-chevron{
+    width:30px;
+    height:30px;
+  }
+  .lean-detail{
+    padding-left:17px;
+  }
+  .lean-detail p:not(.lean-kicker){
+    font-size:.94rem;
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  .lean-chevron,.lean-body{
+    transition:none;
+  }
+}
+
+
+
+/* requested update: compact guideline-based project cards */
+.project-section-head{align-items:flex-start}
+.project-intro{margin:2px 0 0;max-width:760px;font-size:.98rem;line-height:1.6}
+.project-strip{
+  display:grid;
+  grid-auto-flow:column;
+  grid-auto-columns:minmax(330px,370px);
+  gap:16px;
+  overflow:auto;
+  scroll-snap-type:x mandatory;
+  padding:8px 2px 28px;
+  scrollbar-width:none;
+}
+.project-strip::-webkit-scrollbar{display:none}
+.project-card{
+  position:relative;
+  scroll-snap-align:start;
+  min-height:620px;
+  border-radius:30px;
+  padding:22px;
+  overflow:hidden;
+  background:linear-gradient(145deg,rgba(255,255,255,.88),rgba(247,245,252,.74));
+  border:1px solid rgba(255,255,255,.82);
+  box-shadow:var(--soft);
+  transition:.32s var(--ease);
+}
+.project-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.project-card:before{
+  content:"";
+  position:absolute;
+  right:-96px;
+  top:-112px;
+  width:275px;
+  height:245px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(184,168,255,.34),rgba(243,191,208,.11),transparent 72%);
+}
+.project-card:after{
+  content:"";
+  position:absolute;
+  inset:auto 16px 16px auto;
+  width:140px;
+  height:140px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(185,217,245,.18),transparent 70%);
+  pointer-events:none;
+}
+.project-visual{
+  position:absolute;
+  right:-18px;
+  top:34px;
+  width:165px;
+  height:165px;
+  color:var(--project-accent);
+  opacity:.18;
+  pointer-events:none;
+}
+.project-visual iconify-icon{position:absolute;right:18px;top:10px;font-size:7.8rem;color:var(--project-accent)}
+.project-visual .pv-a,.project-visual .pv-b,.project-visual .pv-c{position:absolute;display:block;border:2px solid currentColor;border-radius:28px;opacity:.62}
+.project-visual .pv-a{right:12px;bottom:18px;width:70px;height:96px;background:rgba(255,255,255,.34)}
+.project-visual .pv-b{right:88px;bottom:42px;width:48px;height:48px;border-radius:16px}
+.project-visual .pv-c{right:34px;bottom:44px;width:42px;height:9px;border-radius:999px;background:currentColor;border:0}
+.project-visual-security .pv-a{border-radius:50%;width:118px;height:118px;right:12px;bottom:8px;background:transparent}
+.project-visual-security .pv-b{border-radius:50%;width:84px;height:84px;right:30px;bottom:25px;background:transparent}
+.project-visual-remote iconify-icon{font-size:5.8rem;right:48px;top:0}
+.project-visual-remote .pv-a{right:8px;bottom:24px;width:118px;height:74px;border-radius:22px;background:rgba(255,255,255,.36)}
+.project-visual-remote .pv-b{right:27px;bottom:53px;width:66px;height:24px;border-radius:999px;background:currentColor;border:0}
+.project-visual-remote .pv-c{right:31px;bottom:57px;width:17px;height:17px;border-radius:50%;background:#fff;border:0}
+.project-visual-modular .pv-a{right:72px;bottom:72px;width:46px;height:46px;border-radius:14px;background:rgba(255,255,255,.36)}
+.project-visual-modular .pv-b{right:24px;bottom:34px;width:46px;height:46px;border-radius:14px;background:rgba(255,255,255,.36)}
+.project-visual-modular .pv-c{right:94px;bottom:22px;width:46px;height:46px;border-radius:14px;background:currentColor}
+.project-visual-design .pv-a{right:20px;bottom:6px;width:78px;height:132px;border-radius:24px;background:rgba(255,255,255,.42)}
+.project-visual-design .pv-b{right:34px;bottom:92px;width:50px;height:8px;border-radius:999px;background:currentColor;border:0}
+.project-visual-design .pv-c{right:34px;bottom:71px;width:38px;height:8px;border-radius:999px;background:currentColor;border:0}
+.project-visual-watch .pv-a{right:22px;bottom:30px;width:62px;height:76px;border-radius:22px;background:rgba(255,255,255,.4)}
+.project-visual-watch .pv-b{right:96px;bottom:12px;width:58px;height:110px;border-radius:22px;background:rgba(255,255,255,.32)}
+.project-visual-watch .pv-c{right:58px;bottom:64px;width:42px;height:2px;border-radius:999px;background:currentColor;border:0;transform:rotate(-18deg)}
+.project-meta,.project-badges,.project-card h3,.project-sub,.project-summary,.project-facts,.project-stack,.project-asset{position:relative;z-index:1}
+.project-meta{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;color:rgba(17,20,43,.34);font-weight:850;letter-spacing:-.035em;font-size:1.45rem;line-height:1}
+.project-meta span:last-child{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--lav)}
+.project-badges{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:16px}
+.project-badges span{border-radius:999px;padding:6px 9px;font-size:.64rem;font-weight:880;letter-spacing:.1em;border:1px solid rgba(70,75,110,.12);background:rgba(255,255,255,.66);color:#555b7e}
+.project-badges .work{background:rgba(129,112,216,.12);border-color:rgba(129,112,216,.2);color:#5b5298}
+.project-badges .group{background:rgba(185,217,245,.28);border-color:rgba(80,140,190,.16);color:#496b86}
+.project-badges .self{background:rgba(189,216,198,.32);border-color:rgba(80,145,100,.16);color:#4f765c}
+.project-badges .solo{background:rgba(243,191,208,.22);border-color:rgba(202,120,150,.16);color:#876071}
+.project-card h3{margin:0 0 7px;font-size:clamp(1.28rem,2.1vw,1.65rem);line-height:1.02;letter-spacing:-.045em;max-width:270px}
+.project-sub{margin:0 0 15px;color:var(--lav);font-weight:780;font-size:.86rem;line-height:1.35}
+.project-summary{margin:0 0 16px;color:#303552;line-height:1.52;font-size:.92rem;max-width:310px}
+.project-facts{display:grid;gap:10px;margin-top:14px}
+.project-facts div{padding:11px 12px;border-radius:18px;background:rgba(255,255,255,.58);border:1px solid rgba(255,255,255,.78)}
+.project-facts strong,.project-asset strong{display:block;margin-bottom:5px;font-size:.68rem;text-transform:uppercase;letter-spacing:.14em;color:#7e84a6;font-weight:850}
+.project-facts p,.project-asset p{margin:0;color:#303552;line-height:1.48;font-size:.84rem}
+.project-stack{display:flex;flex-wrap:wrap;gap:7px;margin-top:15px}
+.project-stack span{border:1px solid rgba(129,112,216,.16);background:rgba(255,255,255,.64);border-radius:999px;padding:7px 9px;font-size:.72rem;font-weight:780;color:#555b7e}
+.project-asset{margin-top:15px;padding-top:13px;border-top:1px solid var(--line)}
+.project-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:9px}
+.project-links a,.project-note{display:inline-flex;align-items:center;gap:4px;border-radius:999px;padding:7px 10px;background:rgba(17,20,43,.06);color:#535986;font-size:.76rem;font-weight:820}
+.project-links a:hover{background:#11142b;color:#fff}
+.project-note{color:#8b90ad;font-weight:760}
+@media(max-width:930px){.project-section-head{display:block}.project-intro{margin-bottom:16px}.project-strip{grid-auto-columns:minmax(310px,82vw)}}
+@media(max-width:620px){.project-strip{grid-auto-columns:86vw;gap:13px;padding-bottom:18px}.project-card{min-height:auto;padding:19px;border-radius:26px}.project-card h3{max-width:230px}.project-summary{max-width:none}.project-facts div{padding:10px}.project-visual{opacity:.12;right:-34px}.project-badges span{font-size:.6rem}}
+
 </style>
 </head>
 <body><div class="progress" id="progress"></div><header class="nav" id="nav"><div class="navin"><a class="brand" href="#top">Michelle</a><nav class="links"><a href="#profile">Profile</a><a href="#experience">Experience</a><a href="#work">Top 5</a><a href="#stack">Stack</a><a href="#outside">Outside Work</a><a href="#contact">Contact</a></nav></div></header>
 <main id="top">
-<section class="hero"><div class="wrap hero-grid"><div class="reveal"><h1>I build products by recognizing <span class="soft">patterns, structuring complexity,</span> and turning ideas into <span class="soft">practical</span>, scalable solutions</h1><div class="role"></div><div class="actions"><a class="button" href="#work">View Top 5 Projects <span class="arrow">→</span></a><a class="textlink" href="#experience">Experience <span class="arrow">↓</span></a></div></div><div class="visual reveal"><div class="wash w1" data-parallax="-.035"></div><div class="wash w2" data-parallax=".024"></div><div class="wash w3" data-parallax="-.018"></div></div></div></section>
+<section class="hero"><div class="wrap hero-grid"><div class="reveal"><h1>The best products begin with <span class="soft">understanding, embracing complexity,</span> and evolve into <span class="soft">simple</span>, meaningful experiences</h1><div class="role"></div><div class="actions"><a class="button" href="#work">View Top 5 Projects <span class="arrow">→</span></a><a class="textlink" href="#experience">Experience <span class="arrow">↓</span></a></div></div><div class="visual reveal"><div class="wash w1" data-parallax="-.035"></div><div class="wash w2" data-parallax=".024"></div><div class="wash w3" data-parallax="-.018"></div></div></div></section>
 
-<section class="profile" id="profile"><div class="wrap"><div class="profile-panel reveal"><div class="profile-layout"><div class="profile-intro"><p class="eyebrow">Profile</p><h2>Michelle, in practice.</h2><p>Production iOS background, IT analysis experience, product-facing delivery, and creative discipline. The portfolio is built around how I recognize patterns, structure complexity, and turn unclear ideas into practical systems.</p><div class="profile-chips"><span>iOS Developer</span><span>IT Analyst</span><span>Product-minded</span><span>Creative systems thinker</span></div></div><div class="profile-grid"><article class="profile-item"><iconify-icon icon="ph:device-mobile-camera"></iconify-icon><strong>Core background</strong><span>Mobile banking technology</span><p>iOS delivery, feature work, production support, and 50+ delivered projects across enhancements and system improvements.</p></article><article class="profile-item"><iconify-icon icon="ph:target"></iconify-icon><strong>Working focus</strong><span>Patterns, people, systems</span><p>Bridging software engineering, product thinking, cross-functional communication, and process improvement.</p></article><article class="profile-item"><iconify-icon icon="ph:brain"></iconify-icon><strong>Current direction</strong><span>AI learning + human behavior</span><p>Using the transition period to study AI, creative practice, and alternative frameworks for understanding decision-making.</p></article><article class="profile-item"><iconify-icon icon="ph:paper-plane-tilt"></iconify-icon><strong>Contact</strong><span><a class="profile-link" href="mailto:michelle.m.my@hotmail.com">michelle.m.my@hotmail.com</a></span><p><a class="profile-link" href="https://id.linkedin.com/in/michelle-mmy" target="_blank" rel="noopener">LinkedIn profile</a></p></article></div></div></div></div></section>
+<section class="profile" id="profile"><div class="wrap"><div class="profile-panel reveal"><div class="profile-layout"><div class="profile-intro"><p class="eyebrow">Profile</p><br><h2>Call me Michelle</h2><h4>I build by connecting the dots.</h4><p>From mobile engineering to product delivery, I enjoy turning complexity into clarity and ideas into systems that people can actually use.</p><div class="profile-chips"><span>iOS Developer</span><span>IT Analyst</span><span>Product-minded</span></div></div><div class="profile-grid"><article class="profile-item"><iconify-icon icon="ph:device-mobile-camera"></iconify-icon><strong>Core Background</strong><span>Enterprise Mobile Banking</span><p>6+ years building and evolving digital banking experiences with a focus on stability, scalability, and continuous improvement.</p></article><article class="profile-item"><iconify-icon icon="ph:target"></iconify-icon><strong>Working Focus</strong><span>Patterns • People • Systems</span><p>Every challenge begins with understanding relationships before creating solutions.</p></article><article class="profile-item"><iconify-icon icon="ph:brain"></iconify-icon><strong>Current Direction</strong><span>AI • Creativity • Human Behavior</span><p>Exploring the intersection of technology and human thinking to design products with greater meaning and impact.</p></article><article class="profile-item"><iconify-icon icon="ph:paper-plane-tilt"></iconify-icon><strong>Contact</strong><span><a class="profile-link" href="mailto:michelle.m.my@hotmail.com">michelle.m.my@hotmail.com</a></span><p><a class="profile-link" href="https://id.linkedin.com/in/michelle-mmy" target="_blank" rel="noopener">LinkedIn profile</a></p></article></div></div></div></div></section>
 
-<section id="experience"><div class="wrap"><div class="section-head reveal"><div><p class="eyebrow">Experience</p><h2 class="title">The path so far</h2></div></div><div class="timeline-card reveal"><div class="chapter-tag" id="tk"></div><div class="year" id="ty"></div><h3 id="tt"></h3><p id="tb"></p></div><div class="rail reveal" id="rail"></div></div></section>
+<section id="experience"><div class="wrap"><div class="section-head reveal"><div><p class="eyebrow">Experience</p><h2 class="title">The path so far</h2></div></div><div class="lean-timeline reveal" id="experienceTimeline" aria-label="Career timeline"></div></div></section>
 
-<section class="work" id="work"><div class="wrap"><div class="section-head reveal"><div><p class="eyebrow">Top 5 Projects</p><h2 class="title">A few of my favorites</h2></div><div class="case-controls"><button aria-label="Previous project" id="prev">‹</button><button aria-label="Next project" id="next">›</button></div></div><div class="carousel reveal" id="carousel"></div></div></section>
+<section class="work" id="work"><div class="wrap"><div class="section-head reveal project-section-head"><div><p class="eyebrow">Top 5 Projects</p><h2 class="title">Few of my favorites</h2><p class="copy project-intro"></p></div><div class="case-controls"><button aria-label="Previous project" id="prev">‹</button><button aria-label="Next project" id="next">›</button></div></div><div class="project-strip reveal" id="carousel" aria-label="Selected project cards"></div></div></section>
 <section id="stack"><div class="wrap"><div class="reveal"><p class="eyebrow">Tech Stack</p><h2 class="title">The stack behind the work.</h2><p class="copy"></p><div class="filters" id="filters"></div></div><div class="techgrid reveal" id="techgrid"></div></div></section>
 <section id="outside"><div class="wrap outside-art"><div class="interest-card reveal"><p class="eyebrow">Outside Work</p><h2 class="title">Creative balance beyond technical work.</h2><p class="copy">My core work is structured and technical: systems, code, analysis, and delivery. Outside work, I balance that logic-heavy rhythm with right-brain practices that train visual judgment, intuition, empathy, and pattern awareness.</p><div class="art-tags"><span>right-brain practice</span><span>visual judgment</span><span>pattern awareness</span><span>human behavior</span><span>creative reset</span></div></div><div aria-label="Creative interests collage" class="art-board reveal"><div class="brush b-lav"></div><div class="brush b-pink"></div><article class="art-piece large"><iconify-icon icon="ph:moon-stars"></iconify-icon><strong>Metaphysics</strong><span>BaZi &amp; Human Design as reflective frameworks for timing, character, and decision patterns</span></article><article class="art-piece"><iconify-icon icon="ph:pencil-line"></iconify-icon><strong>Sketching</strong><span>line, proportion, observation</span></article><article class="art-piece"><iconify-icon icon="ph:paint-brush-broad"></iconify-icon><strong>Watercolor</strong><span>soft color, patience, layering</span></article><article class="art-piece"><iconify-icon icon="ph:mountains"></iconify-icon><strong>Nature</strong><span>pattern, quiet, reset</span></article><article class="art-piece"><iconify-icon icon="ph:sparkle"></iconify-icon><strong>Reflection</strong><span>meaning, behavior, context</span></article><article class="art-piece metaphysics"><iconify-icon icon="ph:flower-lotus"></iconify-icon><strong>Flower arranging</strong><span>balance, negative space</span></article></div></div></section>
 <section id="contact"><div class="wrap"><div class="contact-card reveal"><div><p class="eyebrow" style="color:#b8a8ff">Contact</p><h2 class="title">Michelle</h2><p>iOS background, product-facing delivery, creative practice, and transitioning into broader technology work with AI.</p></div><div class="contact-actions"><a class="email" href="mailto:michelle.m.my@hotmail.com"><iconify-icon icon="ph:envelope-simple"></iconify-icon> michelle.m.my@hotmail.com</a><a class="linkedin" href="https://id.linkedin.com/in/michelle-mmy" target="_blank" rel="noopener"><iconify-icon icon="simple-icons:linkedin"></iconify-icon> LinkedIn</a></div></div></div></section>
 </main><footer class="footer"><div class="wrap">Michelle · Portfolio</div></footer>
 <script>
-const timeline=[{"k": "First iOS Build", "y": "2018", "t": "Context-Aware Family Tracking App", "b": "Built a family tracking app as a final project during college days while learning Swift through independent practice, setting the foundation for iOS development."}, {"k": "Joined BCA", "y": "2019", "t": "Production iOS work on myBCA", "b": "Joined Bank Central Asia and worked on the myBCA mobile iOS project, contributing across software engineering into product thinking, production delivery, cross-functional collaboration, and process improvement."}, {"k": "Scaled myBCA", "y": "2021 — 2023", "t": "Building Systems, Leading People", "b": "While continuing to develop features for the myBCA iOS app, I stepped into a leadership role—coordinating delivery, mentoring teammates, improving engineering practices, and contributing to the application’s modular architecture for long-term scalability."}, {"k": "Step New Role", "y": "2024", "t": "Connecting Strategy with Execution", "b": "Moving into an IT Analyst role allowed me to work beyond implementation. I collaborated across business and engineering teams to deliver the myBCA app redesign and extend the banking experience to Apple Watch, ensuring technical feasibility aligned with product vision."}, {"k": "Career Break", "y": "Oct 2025 — Present", "t": "Recharge, reset, and re-scope", "b": "Resigned from BCA for a career break after years in banking technology to recharge and invest in personal transition. This period is used to reset direction, strengthen creative practice, and explore AI as the next layer of practical technology work. Also exploring alternative frameworks for understanding human behavior and decision-making."}];
-const projects=[{"y": "2022", "icon": "ph:fingerprint", "t": "Native Biometric Authentication", "sub": "Hardening App Security", "parts": { "Situation": "To enhance both security and user convenience, the application introduced native biometric authentication as an alternative login method, requiring banking-grade reliability and compatibility across the diverse iOS device ecosystem.", "Task": "Lead the analysis and implementation strategy for native biometric authentication, ensuring secure encryption, consistent user experience, and compatibility across multiple hardware generations.", "Action": "Defined the biometric authentication framework, evaluated secure encryption approaches, and identified device-specific edge cases that could affect authentication consistency, enabling proactive improvements before production release.", "Result": "Successfully delivered a secure and reliable native biometric login experience that strengthened application security, improved user convenience, and maintained stable performance across supported iOS devices." }}, {"y": "2022", "icon": "ph:lifebuoy", "t": "Partial Update", "sub": "Enabling Flexible Feature Rollouts", "parts": {"Situation": "The application required a partial update mechanism to support feature versioning and enable in-app updates without requiring users to install a new release from the App Store.", "Task": "Design and implement a reliable partial update framework that could safely manage feature compatibility while ensuring a seamless user experience.", "Action": "Developed the partial update implementation and identified a potential edge case where a failed version inquiry during fresh installation could block application access. To mitigate this, I introduced a fallback baseline version within the client, ensuring the update mechanism remained resilient under network instability.", "Result": "Successfully enabled flexible in-app feature rollouts while eliminating a critical onboarding failure point, improving both platform reliability and the first-time user experience."}}, {"y": "2023", "icon": "ph:cube-focus", "t": "myBCA iOS Modularization", "sub": "Architecting for Scalability", "parts": {"Situation": "The myBCA iOS application had grown into a monolithic codebase, causing merge conflicts and slowing parallel development across multiple feature teams.", "Task": "Lead the transition to a modular architecture while maintaining ongoing feature delivery, enabling teams to develop independently without affecting system stability.", "Action": "Designed and implemented the modular workspace, extracted shared core components into a Main Module, validated the architecture through live development tracks, and established migration guidelines for the engineering team.", "Result": "Successfully launched the modular architecture with zero major post-release issues, significantly improving development efficiency, reducing code conflicts, and enabling independent feature development across teams."}}, {"y": "2024", "icon": "ph:paint-brush-broad", "t": "myBCA App Design Revamp", "sub": "Modernizing the User Experience", "parts": { "Situation": "The myBCA application underwent a major interface redesign to align with updated brand guidelines while preserving a familiar and seamless experience for millions of existing users.", "Task": "Coordinate the revamp implementation across design, business, and engineering teams, ensuring the new experience could be delivered without disrupting ongoing development or application stability.", "Action": "Facilitated implementation planning, managed the dedicated revamp development branch, and aligned cross-functional stakeholders to balance design objectives with technical feasibility and release stability.", "Result": "Successfully delivered the redesigned application with zero major impact on existing users while maintaining release stability and establishing a cleaner development workflow for parallel feature tracks." }}, {"y": "2024", "icon": "ph:watch", "t": "myBCA Smartwatch Integration", "sub": "Ecosystem Expansion", "parts": {"Situation": "To meet evolving customer lifestyles, BCA aimed to expand the myBCA ecosystem to wearable technology, specifically smartwatches, requiring a seamless multi-device handoff.", "Task": "Lead the smartwatch project from development phase in early 2024 through successful implementation and rollout by the end of the year.", "Action": "Managed the implementation roadmap and provided high-intensity support during the pilot phase to ensure that bugs discovered by early users were resolved immediately. Focused on stable and intuitive mobile-to-watch synchronization.", "Result": "Reached full implementation in Q4 2024 with high responsiveness to pilot feedback, extending the myBCA brand into a new device form factor and demonstrating interdisciplinary potential."}}];
-const tech=[["Languages", "Swift", "logos:swift", "https://www.swift.org/"], ["Languages", "SwiftUI", "simple-icons:swift", "https://developer.apple.com/xcode/swiftui/"], ["Languages", "SQL", "tabler:sql", "https://www.w3schools.com/sql/"], ["Languages", "NoSQL", "simple-icons:mongodb", "https://www.mongodb.com/resources/basics/databases/nosql-explained"], ["Languages", "Java", "logos:java", "https://www.java.com/"], ["Languages", "Kotlin", "logos:kotlin-icon", "https://kotlinlang.org/"], ["Languages", "Python", "logos:python", "https://www.python.org/"], ["Languages", "HTML", "logos:html-5", "https://developer.mozilla.org/en-US/docs/Web/HTML"], ["Languages", "CSS", "logos:css-3", "https://developer.mozilla.org/en-US/docs/Web/CSS"], ["Languages", "JavaScript", "logos:javascript", "https://developer.mozilla.org/en-US/docs/Web/JavaScript"], ["Mobile", "UIKit", "simple-icons:apple", "https://developer.apple.com/documentation/uikit"], ["Mobile", "RxSwift", "simple-icons:reactivex", "https://github.com/ReactiveX/RxSwift"], ["Mobile", "Alamofire", "ph:flame", "https://github.com/Alamofire/Alamofire"], ["Mobile", "Moya", "ph:network", "https://github.com/Moya/Moya"], ["Mobile", "RealmDB", "logos:realm", "https://realm.io/"], ["Backend & Services", "Firebase", "logos:firebase", "https://firebase.google.com/"], ["Backend & Services", "REST API", "carbon:api-1", "https://www.redhat.com/en/topics/api/what-is-a-rest-api"], ["Architecture", "MVVM", "material-symbols:view-module-outline", "https://learn.microsoft.com/en-us/dotnet/architecture/maui/mvvm"], ["Architecture", "Modular Architecture", "material-symbols:account-tree-outline", "https://developer.apple.com/documentation/swift/managing-a-modular-codebase"], ["Data & Analytics", "Elasticsearch", "logos:elasticsearch", "https://www.elastic.co/elasticsearch"], ["Data & Analytics", "Kibana", "logos:kibana", "https://www.elastic.co/kibana"], ["Data & Analytics", "Dynatrace", "simple-icons:dynatrace", "https://www.dynatrace.com/"], ["Data & Analytics", "AppsFlyer", "simple-icons:appsflyer", "https://www.appsflyer.com/"], ["Tools", "Xcode", "devicon:xcode", "https://developer.apple.com/xcode/"], ["Tools", "Git", "logos:git-icon", "https://git-scm.com/"], ["Tools", "Figma", "logos:figma", "https://www.figma.com/"], ["Tools", "Sketch", "logos:sketch", "https://www.sketch.com/"], ["Tools", "Postman", "logos:postman-icon", "https://www.postman.com/"], ["Tools", "VS Code", "logos:visual-studio-code", "https://code.visualstudio.com/"], ["Tools", "SonarQube", "simple-icons:sonarqube", "https://www.sonarsource.com/products/sonarqube/"], ["Tools", "SwiftLint", "simple-icons:swift", "https://github.com/realm/SwiftLint"], ["Workflow", "Agile", "material-symbols:cycle", "https://www.atlassian.com/agile"], ["Workflow", "Human-Centered Design", "material-symbols:accessibility-new", "https://www.ideo.com/blog/what-is-human-centered-design"], ["Workflow", "Scrum", "material-symbols:groups-outline", "https://scrumguides.org/"], ["Workflow", "Jira", "logos:jira", "https://www.atlassian.com/software/jira"], ["Currently Exploring", "AI", "material-symbols:psychology-outline", "https://www.ibm.com/topics/artificial-intelligence"], ["Currently Exploring", "LLMs", "material-symbols:neurology-outline", "https://www.ibm.com/topics/large-language-models"], ];
+const timeline=[{"k":"Independent Project","y":"2017","t":"Computerized Maintenance Management System","b":"During my internship at one of the hotels in my hometown, I developed a web-based Computerized Maintenance Management System that transformed manual operational processes into structured digital workflows. It was my first experience seeing how software could solve practical business problems and improve the way people work."},{"k":"Final Project","y":"2018","t":"Context-Aware Family Tracking App","b":"My final undergraduate project challenged me to connect theory with practical implementation, strengthening my systems thinking and reinforcing my passion for building technology that solves real human problems through a family tracking application that adapted to user situations, deepening my interest in intelligent and human-centered software design. I challenged myself to develop iOS apps for this project with zero knowledge. Thankfully resources and discussion forum was enough back then to complete the project."},{"k":"BCA Journey","y":"Feb 2019","t":"Bank Central Asia","b":"Joined BCA as an IT Trainee (Feb 2019 – Aug 2019) before becoming Senior IT Specialist (Sep 2019–Nov 2024). Starting my role as iOS developer to complete myBCA MVP features before public launch on 2021, I learned to build and maintain production software serving millions of users while balancing performance, security, stability, and user experience. Over the years I expanded beyond feature delivery into incident investigation, release coordination, root cause analysis, engineering standards, modular architecture, mentoring, cross-functional collaboration, and process improvement. As the mobile team grew from a small squad into two iOS developers, two Android developers, and one team lead across parallel tracks, my focus evolved from writing code to enabling people, aligning business with engineering, and building systems that could scale sustainably."},{"k":"Career Transition","y":"Dec 2024 – Sep 2025","t":"Promoted as IT Analyst","b":"Transitioning into an IT Analyst role shifted my focus from implementation toward product planning, stakeholder alignment, delivery coordination, and enterprise decision-making, broadening my perspective beyond engineering execution."},{"k":"Career Break","y":"2025","t":"Resetting Perspective","b":"After 6+ years in enterprise banking technology, I intentionally took a career sabbatical to recharge, deepen my creative practice, study AI and product strategy, and explore human-centered frameworks that broaden the way I approach problem solving beyond technology alone."}];
+const projects=[{"y":"2022","icon":"ph:fingerprint","visual":"security","visualIcon":"ph:fingerprint","t":"Native Biometric Authentication","sub":"Hardening App Security","badges":["WORK ASSIGNMENT","GROUP PROJECT"],"summary":"Researched and implemented native biometric authentication as an alternative login method for the myBCA iOS app, balancing user convenience with banking-grade security.","role":"R&D and iOS developer: explored the authentication approach, assessed encryption and device-compatibility risks, then implemented the production flow.","impact":"Improved the login experience by delivering a secure biometric path that reduced friction while preserving reliability across supported iOS devices.","learned":"I learned how to move from technical exploration to production delivery: validate assumptions, identify edge cases, and turn security research into stable iOS code.","stack":["Swift","UIKit","LocalAuthentication","Keychain","Encryption","iOS Security"],"asset":"","links":[]},{"y":"2022","icon":"logos:firebase","visual":"remote","visualIcon":"logos:firebase","t":"Firebase Remote Config Automation","sub":"Zero-Touch Environment Delivery","badges":["SELF-INITIATED","INDIVIDUAL PROJECT"],"summary":"Integrated Firebase Remote Config to facilitate dynamic baseURL switching for environment delivery, allowing settings to be changed via console rather than code.","role":"Identified the inefficiency of rebuilding IPAs for simple environment changes and implemented the remote configuration solution independently.","impact":"Eliminated four manual steps in the release process: manual baseURL changes in code, archiving, obfuscation, and uploads to TestFlight.","learned":"I learned how to use remote tools to decouple environment management from development, creating a Zero-Touch system that increases production safety.","stack":["Swift","Firebase Remote Config","TestFlight","Release Automation"],"asset":"","links":[{"label":"Firebase Remote Config","url":"https://firebase.google.com/docs/remote-config"}]},{"y":"2023","icon":"ph:cube-focus","visual":"modular","visualIcon":"ph:cube-focus","t":"myBCA iOS Modularization","sub":"Architecting for Scalability","badges":["WORK ASSIGNMENT","GROUP PROJECT"],"summary":"Helped transition the myBCA iOS application from a growing monolithic codebase into a modular architecture that supported parallel development across teams.","role":"Architecture contributor and migration lead: designed the workspace structure, extracted shared core components, validated live feature tracks, and prepared migration guidance.","impact":"Reduced development friction, lowered merge-conflict risk, and enabled feature teams to work more independently with fewer stability issues.","learned":"I learned that architecture is also a collaboration system: clear module boundaries help teams move faster, communicate better, and reduce accidental dependencies.","stack":["Swift","UIKit","Modular Architecture","MVVM","Git","SwiftLint","Xcode"],"asset":"","links":[]},{"y":"2024","icon":"ph:paint-brush-broad","visual":"design","visualIcon":"ph:device-mobile-camera","t":"myBCA App Design Revamp","sub":"Modernizing the User Experience","badges":["WORK ASSIGNMENT","GROUP PROJECT"],"summary":"Coordinated the implementation of a major myBCA interface revamp to modernize the user experience while preserving product stability for existing users.","role":"Implementation coordinator and IT analyst: aligned design, business, and engineering teams, managed the dedicated revamp branch, and protected release stability.","impact":"Helped deliver the redesigned app experience with no major disruption to existing users while supporting a cleaner workflow for parallel feature development.","learned":"I learned how to translate design ambition into executable technical delivery while balancing user experience, stakeholder expectations, release planning, and engineering constraints.","stack":["SwiftUI","UIKit","Figma","Human-Centered Design","Design Module","Git Branching","Release Stability"],"asset":"","links":[{"label":"BCA redesign story","url":"https://www.bca.co.id/id/informasi/news-and-features/2025/02/20/03/57/mybca-hadir-dengan-tampilan-baru-yang-lebih-modern-dan-intuitif"}]},{"y":"2024","icon":"ph:watch","visual":"watch","visualIcon":"ph:watch","t":"myBCA Smartwatch Integration","sub":"Ecosystem Expansion","badges":["WORK ASSIGNMENT","GROUP PROJECT"],"summary":"Supported the expansion of myBCA into smartwatch banking, enabling users to access selected banking features through a connected wearable device.","role":"Project delivery lead: managed the implementation roadmap from development through rollout support, including pilot-phase issue handling and mobile-to-watch synchronization follow-up.","impact":"Extended the myBCA ecosystem into a new device form factor and improved responsiveness during pilot feedback cycles before wider implementation.","learned":"I learned that multi-device experiences require sharper coordination between product behavior, technical constraints, user context, and support readiness.","stack":["Swift","WatchOS","WearOS","Multi-device Sync","Pilot Support"],"asset":"","links":[{"label":"myBCA Smartwatch","url":"https://www.bca.co.id/id/Individu/layanan/e-banking/mybca/smartwatch"}]}];
+const tech=[["Languages", "Swift", "logos:swift", "https://www.swift.org/"], ["Languages", "SwiftUI", "simple-icons:swift", "https://developer.apple.com/xcode/swiftui/"], ["Languages", "SQL", "tabler:sql", "https://www.w3schools.com/sql/"], ["Languages", "NoSQL", "simple-icons:mongodb", "https://www.mongodb.com/resources/basics/databases/nosql-explained"], ["Languages", "Java", "logos:java", "https://www.java.com/"], ["Languages", "Kotlin", "logos:kotlin-icon", "https://kotlinlang.org/"], ["Languages", "Python", "logos:python", "https://www.python.org/"], ["Languages", "HTML", "logos:html-5", "https://developer.mozilla.org/en-US/docs/Web/HTML"], ["Languages", "CSS", "logos:css-3", "https://developer.mozilla.org/en-US/docs/Web/CSS"], ["Languages", "JavaScript", "logos:javascript", "https://developer.mozilla.org/en-US/docs/Web/JavaScript"], ["Languages", "PHP", "logos:php", "https://www.php.net/"], ["Languages", "jQuery", "logos:jquery", "https://jquery.com/"], ["Mobile", "UIKit", "simple-icons:apple", "https://developer.apple.com/documentation/uikit"], ["Mobile", "RxSwift", "simple-icons:reactivex", "https://github.com/ReactiveX/RxSwift"], ["Mobile", "Alamofire", "ph:flame", "https://github.com/Alamofire/Alamofire"], ["Mobile", "Moya", "ph:network", "https://github.com/Moya/Moya"], ["Mobile", "RealmDB", "logos:realm", "https://realm.io/"], ["Backend & Services", "Firebase", "logos:firebase", "https://firebase.google.com/"], ["Backend & Services", "REST API", "carbon:api-1", "https://www.redhat.com/en/topics/api/what-is-a-rest-api"], ["Architecture", "MVVM", "material-symbols:view-module-outline", "https://learn.microsoft.com/en-us/dotnet/architecture/maui/mvvm"], ["Architecture", "Modular Architecture", "material-symbols:account-tree-outline", "https://developer.apple.com/documentation/swift/managing-a-modular-codebase"], ["Data & Analytics", "Elasticsearch", "logos:elasticsearch", "https://www.elastic.co/elasticsearch"], ["Data & Analytics", "Kibana", "logos:kibana", "https://www.elastic.co/kibana"], ["Data & Analytics", "Dynatrace", "simple-icons:dynatrace", "https://www.dynatrace.com/"], ["Data & Analytics", "AppsFlyer", "simple-icons:appsflyer", "https://www.appsflyer.com/"], ["Tools", "Xcode", "devicon:xcode", "https://developer.apple.com/xcode/"], ["Tools", "Git", "logos:git-icon", "https://git-scm.com/"], ["Tools", "Figma", "logos:figma", "https://www.figma.com/"], ["Tools", "Sketch", "logos:sketch", "https://www.sketch.com/"], ["Tools", "Postman", "logos:postman-icon", "https://www.postman.com/"], ["Tools", "VS Code", "logos:visual-studio-code", "https://code.visualstudio.com/"], ["Tools", "SonarQube", "simple-icons:sonarqube", "https://www.sonarsource.com/products/sonarqube/"], ["Tools", "SwiftLint", "simple-icons:swift", "https://github.com/realm/SwiftLint"], ["Workflow", "Agile", "material-symbols:cycle", "https://www.atlassian.com/agile"], ["Workflow", "Human-Centered Design", "material-symbols:accessibility-new", "https://www.ideo.com/blog/what-is-human-centered-design"], ["Workflow", "Scrum", "material-symbols:groups-outline", "https://scrumguides.org/"], ["Workflow", "Jira", "logos:jira", "https://www.atlassian.com/software/jira"], ["Currently Exploring", "AI", "material-symbols:psychology-outline", "https://www.ibm.com/topics/artificial-intelligence"], ["Currently Exploring", "LLMs", "material-symbols:neurology-outline", "https://www.ibm.com/topics/large-language-models"], ];
 const nav=document.getElementById('nav'),prog=document.getElementById('progress'),rev=document.querySelectorAll('.reveal'),para=document.querySelectorAll('[data-parallax]');const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12,rootMargin:'0px 0px -8% 0px'});rev.forEach(e=>io.observe(e));function scrollFx(){const y=scrollY,h=document.documentElement.scrollHeight-innerHeight;nav.classList.toggle('on',y>12);prog.style.width=(h>0?y/h*100:0)+'%';para.forEach(e=>e.style.transform=`translate3d(0,${y*parseFloat(e.dataset.parallax||0)}px,0)`)}addEventListener('scroll',scrollFx,{passive:true});scrollFx();
-const rail=document.getElementById('rail'),tk=document.getElementById('tk'),ty=document.getElementById('ty'),tt=document.getElementById('tt'),tb=document.getElementById('tb');function setT(i){let x=timeline[i];document.querySelectorAll('.tab').forEach((b,n)=>b.classList.toggle('active',n===i));tk.textContent=x.k;ty.textContent=x.y;tt.textContent=x.t;tb.textContent=x.b;rail.children[i]?.scrollIntoView({behavior:'smooth',inline:'center',block:'nearest'})}timeline.forEach((x,i)=>{let b=document.createElement('button');b.className='tab';b.innerHTML=`<strong>${x.k}</strong><span>${x.y}</span>`;b.onclick=()=>setT(i);rail.appendChild(b)});setT(0);
-const carousel=document.getElementById('carousel');let active=0;function setStar(card,key){card.querySelectorAll('.star-tab').forEach(x=>x.classList.toggle('active',x.dataset.key===key));card.querySelector('.star-body').innerHTML=`<strong>${key}</strong><p>${projects[+card.dataset.index].parts[key]}</p>`}function activate(i,scroll=true){active=(i+projects.length)%projects.length;document.querySelectorAll('.case').forEach((c,n)=>{c.classList.toggle('active',n===active);if(n===active)setStar(c,'Situation')});if(scroll)carousel.children[active]?.scrollIntoView({behavior:'smooth',inline:'center',block:'nearest'})}projects.forEach((p,i)=>{let card=document.createElement('article');card.className='case';card.dataset.index=i;card.innerHTML=`<div class="case-top"><div><div class="num">${String(i+1).padStart(2,'0')}</div><div class="case-year">${p.y}</div></div><div class="case-icon"><iconify-icon icon="${p.icon}"></iconify-icon></div></div><h3>${p.t}</h3><p class="sub">${p.sub}</p><div class="detail"><div class="star-tabs">${Object.keys(p.parts).map(k=>`<button class="star-tab" data-key="${k}">${k}</button>`).join('')}</div><div class="star-body"></div></div>`;card.onclick=e=>{if(!e.target.classList.contains('star-tab'))activate(i,true)};card.querySelectorAll('.star-tab').forEach(btn=>btn.onclick=e=>{e.stopPropagation();setStar(card,btn.dataset.key)});carousel.appendChild(card)});document.getElementById('prev').onclick=()=>activate(active-1,true);document.getElementById('next').onclick=()=>activate(active+1,true);activate(0,false);
+const experienceTimeline=document.getElementById('experienceTimeline');const timelineMeta=[{label:'Internship',chips:['PHP','MySQL','jQuery','JavaScript'],accent:'#8170d8'},{label:'Politeknik Caltex Riau',chips:['Banking tech','Production iOS','Delivery'],accent:'#27a7e7'},{label:'myBCA iOS',chips:['Leadership','Modular architecture','Team delivery'],accent:'#5ac887'},{label:'myBCA Mobile Team',chips:['Product alignment','Cross-functional work','Technical feasibility'],accent:'#f3a51d'},{label:'- Independent Transition',chips:['Current signal','AI exploration','Creative reset','Human behavior'],accent:'#11142b',current:true}];function closeExperienceEntry(entry){entry.classList.remove('open');entry.querySelector('.lean-trigger')?.setAttribute('aria-expanded','false')}function renderExperienceTimeline(){if(!experienceTimeline)return;experienceTimeline.innerHTML=timeline.map((x,i)=>{const m=timelineMeta[i]||timelineMeta[0];return `<article class="lean-entry${m.current?' current':''}" style="--accent:${m.accent}"><div class="lean-marker"><span></span></div><div class="lean-content"><button class="lean-trigger" type="button" aria-expanded="false" aria-controls="experience-detail-${i}"><span class="lean-main"><span class="lean-title">${x.t}<em>${m.label}</em>${m.current?'<b>Current</b>':''}</span><span class="lean-date">${x.y}</span></span><span class="lean-chevron" aria-hidden="true">⌄</span></button><div class="lean-body" id="experience-detail-${i}"><div class="lean-detail"><p class="lean-kicker">${x.k}</p><p>${x.b}</p></div></div></div></article>`}).join('');experienceTimeline.addEventListener('click',e=>{const btn=e.target.closest('.lean-trigger');if(!btn)return;const entry=btn.closest('.lean-entry');const wasOpen=entry.classList.contains('open');experienceTimeline.querySelectorAll('.lean-entry.open').forEach(closeExperienceEntry);if(!wasOpen){entry.classList.add('open');btn.setAttribute('aria-expanded','true')}})}renderExperienceTimeline();
+const carousel=document.getElementById('carousel');function safeText(v){return String(v??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]))}function projectBadgeClass(label){let x=label.toLowerCase();if(x.includes('self'))return 'self';if(x.includes('individual'))return 'solo';if(x.includes('group'))return 'group';if(x.includes('work'))return 'work';return 'default'}function renderProjectVisual(p){return `<div class="project-visual project-visual-${safeText(p.visual)}" aria-hidden="true"><iconify-icon icon="${safeText(p.visualIcon||p.icon)}"></iconify-icon><span class="pv-a"></span><span class="pv-b"></span><span class="pv-c"></span></div>`}function renderProjectCards(){if(!carousel)return;carousel.innerHTML=projects.map((p,i)=>`<article class="project-card project-card-${safeText(p.visual)}" style="--project-accent:${['#8170d8','#f3a51d','#5ac887','#b8a8ff','#27a7e7'][i%5]}">${renderProjectVisual(p)}<div class="project-meta"><span>${String(i+1).padStart(2,'0')}</span><span>${safeText(p.y)}</span></div><div class="project-badges">${(p.badges||[]).map(b=>`<span class="${projectBadgeClass(b)}">${safeText(b)}</span>`).join('')}</div><h3>${safeText(p.t)}</h3><p class="project-sub">${safeText(p.sub)}</p><p class="project-summary">${safeText(p.summary)}</p><div class="project-facts"><div><strong>Role</strong><p>${safeText(p.role)}</p></div><div><strong>Impact</strong><p>${safeText(p.impact)}</p></div><div><strong>Learned</strong><p>${safeText(p.learned)}</p></div></div><div class="project-stack" aria-label="Tech stack">${(p.stack||[]).map(x=>`<span>${safeText(x)}</span>`).join('')}</div><div class="project-asset"><strong>link</strong><p>${safeText(p.asset)}</p>${p.links&&p.links.length?`<div class="project-links">${p.links.map(l=>`<a href="${safeText(l.url)}" target="_blank" rel="noopener">${safeText(l.label)} <span>↗</span></a>`).join('')}</div>`:`<span class="project-note">Internal project; no public link available.</span>`}</div></article>`).join('')}function scrollProjects(dir){if(!carousel)return;carousel.scrollBy({left:dir*Math.min(430,carousel.clientWidth*.86),behavior:'smooth'})}renderProjectCards();document.getElementById('prev')?.addEventListener('click',()=>scrollProjects(-1));document.getElementById('next')?.addEventListener('click',()=>scrollProjects(1));
 const cats=['All',...new Set(tech.map(t=>t[0]))],filters=document.getElementById('filters'),grid=document.getElementById('techgrid');cats.forEach((c,i)=>{let b=document.createElement('button');b.className='filter'+(i?'':' active');b.textContent=c;b.onclick=()=>{document.querySelectorAll('.filter').forEach(x=>x.classList.remove('active'));b.classList.add('active');document.querySelectorAll('.tech').forEach(card=>card.classList.toggle('hide',c!=='All'&&card.dataset.cat!==c))};filters.appendChild(b)});tech.forEach(([cat,name,icon,href])=>{let a=document.createElement('a');a.className='tech';a.href=href;a.target='_blank';a.rel='noopener';a.dataset.cat=cat;a.innerHTML=`<iconify-icon icon="${icon}"></iconify-icon><span>${name}</span><small>${cat}</small>`;grid.appendChild(a)});
 </script></body></html>
