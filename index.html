@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Michelle — Portfolio</title>
+<meta content="Portfolio of Michelle: production iOS experience, systems thinking, product judgment, and creative practice." name="description"/>
+<script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+<style>
+:root{--ink:#11142b;--copy:#636985;--line:rgba(70,75,110,.14);--paper:#fbfbfd;--lav:#8170d8;--lav2:#b8a8ff;--pink:#f3bfd0;--blue:#b9d9f5;--sage:#bdd8c6;--peach:#f3d9c8;--shadow:0 28px 86px rgba(35,39,72,.11);--soft:0 15px 42px rgba(35,39,72,.07);--ease:cubic-bezier(.22,.75,.18,1)}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:radial-gradient(circle at 12% 5%,rgba(184,168,255,.27),transparent 28rem),radial-gradient(circle at 91% 3%,rgba(243,191,208,.24),transparent 28rem),linear-gradient(#fff 0%,#fbfbfd 45%,#f8f6fb 100%);overflow-x:hidden}a{text-decoration:none;color:inherit}button{font:inherit;color:inherit}.progress{position:fixed;inset:0 auto auto 0;height:2px;width:0;background:linear-gradient(90deg,var(--lav),var(--pink),var(--blue),var(--sage));z-index:5}.wrap,.navin{width:min(1160px,calc(100% - 44px));margin:auto}.nav{position:fixed;inset:0 0 auto 0;height:58px;z-index:4;background:rgba(251,251,253,.7);backdrop-filter:blur(22px) saturate(170%);border-bottom:1px solid transparent}.nav.on{border-bottom-color:var(--line);background:rgba(251,251,253,.92)}.navin{height:100%;display:flex;align-items:center;justify-content:space-between}.brand{font-family:"Snell Roundhand","Brush Script MT",cursive;font-size:1.55rem;color:#4b507d}.links{display:flex;gap:25px;font-size:.83rem;color:#3e4368}.links a:hover{color:var(--lav)}.mailbtn{border:1px solid rgba(129,112,216,.28);border-radius:999px;padding:8px 14px;font-size:.82rem;background:rgba(255,255,255,.6)}.eyebrow{font-size:.72rem;text-transform:uppercase;letter-spacing:.18em;color:var(--lav);font-weight:850;margin:0 0 16px}.title{font-size:clamp(2.55rem,6vw,6rem);line-height:.94;letter-spacing:-.065em;margin:0 0 22px;font-weight:780}.soft{font-family:Georgia,serif;font-style:italic;font-weight:400;color:var(--lav)}.copy{max-width:720px;color:var(--copy);line-height:1.72;font-size:1.05rem}.button{display:inline-flex;align-items:center;gap:10px;border:0;border-radius:999px;padding:13px 20px;background:linear-gradient(135deg,#6f62c8,#9382e7);color:#fff;font-weight:720;box-shadow:0 18px 45px rgba(111,98,200,.25)}.textlink{font-weight:720;color:#535986}.actions{display:flex;gap:22px;flex-wrap:wrap;align-items:center;margin-top:28px}.arrow{display:inline-block;transition:.3s var(--ease)}a:hover .arrow,.button:hover .arrow{transform:translateX(4px)}.hero{min-height:98vh;padding:96px 0 78px;display:grid;align-items:center}.hero-grid{display:grid;grid-template-columns:1fr minmax(410px,1fr);gap:48px;align-items:center}.hero h1{font-size:clamp(3.45rem,7.2vw,7.2rem);line-height:.9;letter-spacing:-.073em;margin:0 0 20px}.role{font-size:clamp(1.08rem,2vw,1.42rem);font-weight:760;color:var(--lav);margin-bottom:16px}.visual{position:relative;min-height:570px;display:grid;place-items:center}.wash{position:absolute;border-radius:50%;filter:blur(2px);mix-blend-mode:multiply;animation:float 9s var(--ease) infinite alternate}.w1{width:520px;height:350px;right:60px;top:74px;background:radial-gradient(circle,rgba(184,168,255,.52),rgba(185,217,245,.28) 58%,transparent 72%)}.w2{width:430px;height:330px;right:-30px;top:38px;background:radial-gradient(circle,rgba(243,191,208,.52),rgba(243,217,200,.24) 62%,transparent 76%);animation-delay:-3s}.w3{width:330px;height:250px;left:20px;bottom:82px;background:radial-gradient(circle,rgba(189,216,198,.38),transparent 70%);animation-delay:-5s}@keyframes float{to{transform:translate(14px,-14px) scale(1.04)}}.mini{position:relative;width:min(560px,90vw);height:560px}.desk{position:absolute;inset:70px 28px 22px;border-radius:46px;background:linear-gradient(rgba(255,255,255,.54),rgba(255,255,255,.82));box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.78);backdrop-filter:blur(18px)}.bubble{position:absolute;z-index:3;max-width:282px;background:rgba(255,255,255,.78);border:1px solid rgba(255,255,255,.86);border-radius:24px;padding:15px 17px;box-shadow:var(--soft);font-size:.86rem;color:#4d5272;line-height:1.55}.btop{left:6px;top:40px}.bbot{right:8px;bottom:42px}.bubble strong{display:block;color:var(--ink);font-size:.76rem;text-transform:uppercase;letter-spacing:.14em;margin-bottom:6px}.workspace{position:relative;width:430px;height:450px;margin:84px auto 0}.avatar{position:absolute;left:136px;top:42px;width:150px;height:210px;z-index:2}.hair{position:absolute;left:18px;top:2px;width:122px;height:156px;background:linear-gradient(145deg,#171827,#443650);border-radius:48%}.face{position:absolute;left:39px;top:45px;width:78px;height:92px;background:#f2d6c6;border-radius:48%;box-shadow:inset -9px -8px 0 rgba(200,132,119,.12)}.neck{position:absolute;left:62px;top:127px;width:42px;height:44px;background:#eccab8;border-radius:24px}.body{position:absolute;left:4px;top:158px;width:142px;height:92px;background:linear-gradient(135deg,#fff8ef,#f2edf8);border-radius:52% 48% 22% 22%}.glasses:before,.glasses:after{content:"";position:absolute;top:70px;width:31px;height:25px;border:2px solid rgba(59,58,85,.56);border-radius:50%;z-index:4}.glasses:before{left:30px}.glasses:after{left:82px}.glasses i{position:absolute;left:63px;top:82px;width:20px;height:2px;background:rgba(59,58,85,.48);z-index:4}.eye{position:absolute;top:83px;width:4px;height:4px;background:#2b2b38;border-radius:50%;z-index:5}.eye.l{left:49px}.eye.r{left:99px}.smile{position:absolute;left:66px;top:108px;width:18px;height:9px;border-bottom:2px solid #b56e73;border-radius:50%;z-index:5}.screen{position:absolute;background:rgba(255,255,255,.76);border:1px solid rgba(70,76,120,.16);box-shadow:var(--soft);backdrop-filter:blur(16px);z-index:2}.laptop{left:28px;bottom:65px;width:230px;height:150px;border-radius:20px}.laptop:after{content:"";position:absolute;left:-14px;right:-14px;bottom:-20px;height:26px;border-radius:0 0 24px 24px;background:#e6e9f4}.bar{height:30px;border-bottom:1px solid rgba(70,76,120,.12);display:flex;gap:6px;align-items:center;padding:0 12px}.dot{width:7px;height:7px;border-radius:50%;background:var(--pink)}.dot:nth-child(2){background:var(--peach)}.dot:nth-child(3){background:var(--sage)}.lines{padding:16px 18px;display:grid;gap:9px}.lines span{height:7px;border-radius:999px;background:linear-gradient(90deg,rgba(129,112,216,.44),rgba(185,217,245,.28));display:block}.lines span:nth-child(2){width:78%;background:linear-gradient(90deg,rgba(189,216,198,.45),rgba(243,191,208,.24))}.lines span:nth-child(3){width:64%}.ai{right:8px;bottom:100px;width:172px;height:160px;border-radius:24px}.ai h4,.pad h4{margin:13px 14px 6px;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--lav)}.ai p{margin:0 14px 8px;color:#565b7c;font-size:.74rem;line-height:1.35}.ai iconify-icon{font-size:4.5rem;color:rgba(129,112,216,.38);margin:8px 0 0 50px}.pad{left:235px;top:44px;width:170px;height:128px;border-radius:24px;transform:rotate(3deg)}.sketch{position:absolute;left:14px;right:14px;bottom:14px;height:55px;border-radius:16px;background:linear-gradient(135deg,rgba(185,217,245,.25),rgba(243,191,208,.18))}.sketch:before{content:"";position:absolute;left:18px;right:18px;top:25px;height:2px;background:rgba(48,53,82,.32);box-shadow:0 12px 0 rgba(48,53,82,.16)}.palette{position:absolute;right:42px;bottom:28px;width:96px;height:52px;border-radius:50px;background:#fff;box-shadow:var(--soft);z-index:2;display:flex;gap:8px;align-items:center;justify-content:center}.paint{width:13px;height:13px;border-radius:50%}.paint:nth-child(1){background:var(--lav)}.paint:nth-child(2){background:var(--pink)}.paint:nth-child(3){background:var(--blue)}.paint:nth-child(4){background:var(--sage)}.flower{position:absolute;left:32px;top:260px;width:70px;height:96px;z-index:2}.flower:before{content:"";position:absolute;left:35px;top:20px;width:2px;height:70px;background:#7f8f76;transform:rotate(10deg)}.flower span{position:absolute;width:18px;height:18px;border-radius:50%;background:var(--pink);left:25px;top:14px;box-shadow:14px 4px 0 var(--peach),-12px 8px 0 var(--lav2),6px -12px 0 var(--blue)}section{padding:112px 0}.feature{padding-top:52px}.feature-card{border-radius:48px;padding:66px;display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center;background:linear-gradient(135deg,rgba(255,255,255,.82),rgba(247,244,253,.88));border:1px solid rgba(255,255,255,.82);box-shadow:var(--shadow)}.device{width:min(315px,100%);aspect-ratio:9/18;margin:auto;border-radius:42px;background:#11142b;padding:12px;box-shadow:0 38px 80px rgba(36,40,76,.22)}.devicein{height:100%;border-radius:32px;background:linear-gradient(#fff,#f6f8ff);padding:22px;overflow:hidden}.device-top{display:flex;justify-content:space-between;font-weight:780}.device-card{margin-top:22px;border-radius:26px;padding:18px;background:linear-gradient(135deg,rgba(129,112,216,.14),rgba(185,217,245,.24));min-height:128px}.device-list{display:grid;gap:10px;margin-top:22px}.device-list span{height:46px;border-radius:18px;background:white;box-shadow:0 8px 22px rgba(36,40,76,.06)}.section-head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin-bottom:34px}.timeline-card{min-height:390px;border-radius:48px;padding:56px;background:linear-gradient(145deg,rgba(255,255,255,.86),rgba(247,245,252,.76));box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.8);position:relative;overflow:hidden}.timeline-card:before{content:"";position:absolute;right:-120px;bottom:-160px;width:420px;height:330px;background:radial-gradient(circle,rgba(184,168,255,.36),rgba(243,191,208,.16),transparent 72%);border-radius:50%}.chapter-tag{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--lav);font-weight:850}.year{font-size:clamp(4.8rem,13vw,9.8rem);line-height:.8;letter-spacing:-.08em;color:rgba(129,112,216,.18);font-weight:850;margin:20px 0 8px}.timeline-card h3{font-size:clamp(2rem,4vw,4.4rem);line-height:1;letter-spacing:-.05em;margin:0 0 22px}.timeline-card p{position:relative;max-width:790px;color:#303552;line-height:1.72;font-size:1.08rem}.rail{display:flex;gap:10px;overflow:auto;padding:16px 4px 4px;margin-top:18px;scrollbar-width:none}.rail::-webkit-scrollbar{display:none}.tab{min-width:180px;border:1px solid var(--line);background:rgba(255,255,255,.65);border-radius:22px;padding:16px 18px;text-align:left;cursor:pointer;transition:.34s var(--ease)}.tab strong{display:block;margin-bottom:7px}.tab span{font-size:.82rem;color:#8b90ad}.tab.active{background:linear-gradient(135deg,rgba(129,112,216,.16),rgba(185,217,245,.18));border-color:rgba(129,112,216,.32);box-shadow:0 14px 32px rgba(129,112,216,.12);transform:translateY(-3px)}.bridge-card{border-radius:48px;background:#11142b;color:#fff;overflow:hidden;position:relative;box-shadow:var(--shadow);padding:58px}.bridge-card:before{content:"";position:absolute;right:-80px;top:-110px;width:470px;height:360px;border-radius:50%;background:radial-gradient(circle,rgba(184,168,255,.42),rgba(243,191,208,.22),transparent 70%)}.bridge-card h2{font-size:clamp(2.2rem,5vw,5.4rem);line-height:.92;letter-spacing:-.06em;margin:0 0 22px;max-width:820px}.bridge-card p{color:rgba(255,255,255,.74);line-height:1.72;max-width:760px}.signals{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:36px;position:relative}.signal{border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.08);border-radius:26px;padding:22px}.signal strong{display:block;font-size:1.04rem;margin-bottom:8px}.signal span{display:block;color:rgba(255,255,255,.62);line-height:1.55;font-size:.92rem}.lesson-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:34px}.lesson{min-height:190px;border-radius:28px;padding:24px;background:rgba(255,255,255,.68);border:1px solid rgba(255,255,255,.76);box-shadow:var(--soft);transition:.35s var(--ease)}.lesson:hover{transform:translateY(-5px)}.lesson iconify-icon{font-size:1.9rem;color:var(--lav);margin-bottom:18px}.lesson h3{margin:0 0 10px}.lesson p{margin:0;color:var(--copy);line-height:1.55;font-size:.92rem}.work{background:linear-gradient(180deg,transparent,rgba(247,244,253,.8),transparent)}.carousel{display:flex;gap:16px;overflow:auto;scroll-snap-type:x mandatory;padding:8px 0 28px;scrollbar-width:none}.carousel::-webkit-scrollbar{display:none}.case{position:relative;flex:0 0 245px;min-height:485px;scroll-snap-align:center;border:1px solid rgba(255,255,255,.78);background:rgba(255,255,255,.72);border-radius:38px;padding:22px;box-shadow:var(--soft);overflow:hidden;cursor:pointer;transition:flex-basis .55s var(--ease),transform .45s var(--ease),box-shadow .45s var(--ease),background .45s var(--ease)}.case:hover{transform:translateY(-4px)}.case.active{flex-basis:min(720px,calc(100vw - 52px));background:linear-gradient(135deg,rgba(255,255,255,.92),rgba(247,244,253,.92));box-shadow:var(--shadow);cursor:default}.case:before{content:"";position:absolute;right:-95px;top:-105px;width:260px;height:250px;border-radius:50%;background:radial-gradient(circle,rgba(184,168,255,.42),rgba(243,191,208,.18),transparent 70%);transition:.5s var(--ease)}.case.active:before{width:420px;height:330px;right:-80px}.case-top{position:relative;display:flex;justify-content:space-between}.num{font-weight:850;color:rgba(17,20,43,.28);letter-spacing:-.04em;font-size:2.6rem;line-height:.9}.case-year{font-size:.82rem;font-weight:800;color:var(--lav);letter-spacing:.12em}.case-icon{width:68px;height:68px;border-radius:24px;background:rgba(255,255,255,.78);display:grid;place-items:center;box-shadow:0 12px 30px rgba(36,40,76,.08)}.case-icon iconify-icon{font-size:2.1rem;color:var(--lav)}.case h3{position:relative;margin:28px 0 10px;font-size:1.55rem;line-height:1.04;letter-spacing:-.04em}.case .sub{position:relative;margin:0;color:var(--copy);line-height:1.5}.detail{position:relative;margin-top:26px;display:none;opacity:0;transform:translateY(10px)}.case.active .detail{display:block;animation:detailIn .45s var(--ease) forwards}@keyframes detailIn{to{opacity:1;transform:translateY(0)}}.star-tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:16px}.star-tab{border:1px solid var(--line);background:rgba(255,255,255,.66);border-radius:18px;padding:11px 12px;font-weight:800;font-size:.8rem;color:#545a80;cursor:pointer;text-align:left}.star-tab.active{background:#11142b;color:#fff;border-color:#11142b}.star-body{border-radius:26px;padding:23px;background:rgba(255,255,255,.76);border:1px solid rgba(255,255,255,.8);min-height:144px}.star-body strong{display:block;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--lav);margin-bottom:10px}.star-body p{margin:0;color:#303552;line-height:1.65}.case-controls{display:flex;gap:10px}.case-controls button{width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:rgba(255,255,255,.75);cursor:pointer}.filters{display:flex;gap:10px;flex-wrap:wrap;margin:28px 0}.filter{border:1px solid var(--line);background:rgba(255,255,255,.68);border-radius:999px;padding:10px 14px;cursor:pointer;font-size:.86rem;color:#4f5477}.filter.active{background:#11142b;color:#fff}.techgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.tech{min-height:92px;border:1px solid rgba(255,255,255,.76);background:rgba(255,255,255,.68);border-radius:24px;padding:18px;box-shadow:0 10px 28px rgba(36,40,76,.055);display:grid;grid-template-columns:auto 1fr;grid-template-rows:auto auto;column-gap:13px;align-items:center;transition:.32s var(--ease)}.tech:hover{transform:translateY(-4px);box-shadow:var(--soft)}.tech.hide{display:none}.tech iconify-icon{grid-row:1/3;font-size:2rem}.tech span{font-weight:780}.tech small{color:#8b90ad;font-size:.78rem}.outside-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:24px}.interest-card{border-radius:48px;padding:52px;background:linear-gradient(135deg,rgba(255,255,255,.78),rgba(247,244,253,.82));border:1px solid rgba(255,255,255,.82);box-shadow:var(--soft)}.interest-icons{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}.interest{border-radius:26px;min-height:142px;padding:20px;background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.84);display:grid;align-content:center;text-align:center;gap:11px}.interest iconify-icon{font-size:2.15rem;color:var(--lav);margin:auto}.interest span{font-weight:750}.contact-card{border-radius:48px;padding:56px;background:#11142b;color:#fff;display:flex;justify-content:space-between;align-items:center;gap:28px;box-shadow:var(--shadow)}.contact-card p{color:rgba(255,255,255,.68);line-height:1.65}.contact-card .title{font-size:clamp(2.3rem,5vw,4.9rem);margin-bottom:10px}.email{display:inline-flex;align-items:center;gap:12px;border-radius:999px;padding:14px 20px;background:#fff;color:#11142b;font-weight:780}.footer{padding:34px 0;color:#8b90ad;font-size:.88rem}.reveal{opacity:0;transform:translateY(34px);transition:1s var(--ease)}.reveal.show{opacity:1;transform:translateY(0)}@media(max-width:930px){.links{display:none}.hero-grid,.feature-card,.outside-grid{grid-template-columns:1fr}.visual{min-height:520px}.feature-card{padding:38px}.lesson-grid{grid-template-columns:1fr 1fr}.techgrid{grid-template-columns:repeat(2,1fr)}.signals{grid-template-columns:1fr}.case.active{flex-basis:calc(100vw - 52px)}.star-tabs{grid-template-columns:1fr 1fr}.contact-card{display:block}.email{margin-top:18px}}@media(max-width:620px){.wrap,.navin{width:min(100% - 28px,1160px)}section{padding:82px 0}.hero h1{font-size:3.1rem}.title{font-size:2.5rem}.visual{display:none}.lesson-grid,.techgrid,.interest-icons{grid-template-columns:1fr}.timeline-card,.bridge-card,.interest-card,.contact-card{padding:28px}.case{flex-basis:78vw}.case.active{flex-basis:calc(100vw - 32px)}.case{min-height:520px}.star-tabs{grid-template-columns:1fr}.section-head{display:block}.case-controls{margin-top:16px}}
+/* profile + responsive brand + contact/footer refinements */
+.profile{padding-top:70px}
+.profile-panel{border-radius:48px;padding:52px;background:linear-gradient(135deg,rgba(255,255,255,.84),rgba(247,244,253,.78));border:1px solid rgba(255,255,255,.84);box-shadow:var(--shadow);position:relative;overflow:hidden}
+.profile-panel:before{content:"";position:absolute;right:-120px;top:-130px;width:390px;height:310px;border-radius:50%;background:radial-gradient(circle,rgba(184,168,255,.38),rgba(243,191,208,.16),transparent 72%)}
+.profile-layout{position:relative;display:grid;grid-template-columns:.82fr 1.18fr;gap:38px;align-items:start}.profile-intro h2{font-size:clamp(2.2rem,4.7vw,5.2rem);line-height:.94;letter-spacing:-.06em;margin:0 0 18px}.profile-intro p{color:var(--copy);line-height:1.72;margin:0}.profile-chips{display:flex;gap:9px;flex-wrap:wrap;margin-top:22px}.profile-chips span{border:1px solid rgba(129,112,216,.2);background:rgba(255,255,255,.62);border-radius:999px;padding:8px 12px;font-size:.78rem;font-weight:780;color:#545a80}.profile-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:13px}.profile-item{border:1px solid rgba(255,255,255,.82);background:rgba(255,255,255,.66);border-radius:26px;padding:21px;box-shadow:0 12px 34px rgba(36,40,76,.055);min-height:132px}.profile-item iconify-icon{font-size:1.75rem;color:var(--lav);margin-bottom:13px}.profile-item strong{display:block;font-size:.78rem;text-transform:uppercase;letter-spacing:.15em;color:#7e84a6;margin-bottom:8px}.profile-item span{display:block;font-weight:770;line-height:1.35}.profile-item p{margin:7px 0 0;color:var(--copy);font-size:.9rem;line-height:1.5}.profile-link{color:var(--lav);font-weight:820}.contact-actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:flex-end}.linkedin{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:14px 20px;background:rgba(255,255,255,.1);color:#fff;font-weight:780}.footer-inner{display:flex;justify-content:space-between;gap:22px;align-items:center;border-top:1px solid var(--line);padding-top:24px}.footer-quote{max-width:650px;color:#636985;font-family:Georgia,serif;font-style:italic;line-height:1.55}.footer-name{font-weight:800;color:#545a80;white-space:nowrap}.art-piece.metaphysics{grid-column:span 2;background:linear-gradient(135deg,rgba(255,255,255,.78),rgba(184,168,255,.14),rgba(243,191,208,.12))}
+@media(max-width:930px){.navin{justify-content:center}.brand{position:absolute;left:50%;transform:translateX(-50%);font-size:1.18rem}.profile-layout{grid-template-columns:1fr}.contact-actions{justify-content:flex-start}.footer-inner{display:block}.footer-name{margin-bottom:12px}.outside-art{grid-template-columns:1fr}}
+@media(max-width:620px){.profile{padding-top:56px}.profile-panel{padding:28px;border-radius:34px}.profile-grid{grid-template-columns:1fr}.profile-item{min-height:auto}.art-piece.metaphysics{grid-column:auto}.brand{font-size:1.16rem}.footer-quote{font-size:.92rem}}
+
+.case.active{flex-basis:min(780px,calc(100vw - 52px));}.case .detail{max-width:680px}.case.active .detail{display:block}.star-body{min-height:120px}.hero h1{max-width:880px}.feature{display:none}.bridge{display:none}
+/* compact hero + refined arts section overrides */
+.hero{min-height:100svh;padding:74px 0 38px;}
+.hero-grid{grid-template-columns:minmax(0,1.04fr) minmax(360px,.86fr);gap:26px;}
+.hero h1{font-size:clamp(2.45rem,4.9vw,5.25rem);line-height:.96;letter-spacing:-.061em;max-width:790px;margin-bottom:16px;}
+.role{font-size:clamp(.98rem,1.55vw,1.18rem);margin-bottom:12px;}
+.copy{font-size:1rem;line-height:1.62;}
+.actions{margin-top:22px;}
+.visual{min-height:470px;}
+.w1{width:420px;height:286px;right:44px;top:52px}.w2{width:350px;height:272px;right:-14px;top:28px}.w3{width:275px;height:210px;left:34px;bottom:62px}
+.mini{width:min(490px,86vw);height:470px;}
+.desk{inset:58px 30px 24px;border-radius:38px;}
+.bubble{font-size:.78rem;line-height:1.45;padding:12px 14px;border-radius:20px;max-width:245px;}
+.bubble strong{font-size:.68rem;margin-bottom:4px;}
+.btop{left:6px;top:26px}.bbot{right:12px;bottom:22px;max-width:238px;}
+.workspace{transform:scale(.82);transform-origin:center top;margin-top:56px;}
+.techgrid{grid-template-columns:repeat(auto-fit,minmax(190px,1fr));}
+.tech iconify-icon{font-size:1.9rem;color:var(--lav)}
+.outside-art{display:grid;grid-template-columns:.92fr 1.08fr;gap:28px;align-items:stretch;}
+.outside-art .interest-card{position:relative;overflow:hidden;min-height:430px;display:flex;flex-direction:column;justify-content:center;}
+.outside-art .interest-card:after{content:"";position:absolute;right:-90px;bottom:-100px;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(243,191,208,.36),rgba(184,168,255,.14),transparent 72%)}
+.art-tags{display:flex;gap:9px;flex-wrap:wrap;margin-top:28px;position:relative;z-index:1}.art-tags span{border:1px solid rgba(129,112,216,.18);background:rgba(255,255,255,.56);border-radius:999px;padding:8px 12px;font-size:.78rem;font-weight:760;color:#555b7e}.art-board{position:relative;min-height:430px;border-radius:48px;background:linear-gradient(135deg,rgba(255,255,255,.82),rgba(250,244,249,.78));border:1px solid rgba(255,255,255,.82);box-shadow:var(--soft);overflow:hidden;padding:28px;display:grid;grid-template-columns:1.1fr .9fr;grid-auto-rows:minmax(118px,auto);gap:14px}.brush{position:absolute;border-radius:999px;filter:blur(.2px);opacity:.85;transform:rotate(-10deg)}.b-lav{width:310px;height:115px;left:34px;top:34px;background:linear-gradient(90deg,rgba(184,168,255,.34),rgba(185,217,245,.18),transparent)}.b-pink{width:260px;height:100px;right:-22px;bottom:54px;background:linear-gradient(90deg,rgba(243,191,208,.28),rgba(243,217,200,.22),transparent);transform:rotate(14deg)}.art-piece{position:relative;z-index:1;border:1px solid rgba(255,255,255,.75);background:rgba(255,255,255,.62);border-radius:30px;padding:20px;display:flex;flex-direction:column;justify-content:end;min-height:126px;box-shadow:0 12px 32px rgba(36,40,76,.055);transition:.35s var(--ease)}.art-piece:hover{transform:translateY(-5px) rotate(-.4deg);box-shadow:var(--soft)}.art-piece.large{grid-row:span 2;background:linear-gradient(145deg,rgba(255,255,255,.78),rgba(247,244,253,.62))}.art-piece iconify-icon{font-size:2.25rem;color:var(--lav);margin-bottom:auto}.art-piece strong{font-size:1.05rem;letter-spacing:-.02em}.art-piece span{margin-top:6px;color:#7a7f9d;font-size:.84rem;line-height:1.35}
+@media(max-width:930px){.hero{min-height:auto;padding:84px 0 54px}.hero-grid{grid-template-columns:1fr}.visual{min-height:450px}.mini{margin:auto}.outside-art{grid-template-columns:1fr}.art-board{min-height:390px}.outside-art .interest-card{min-height:auto}.hero h1{font-size:clamp(2.55rem,8vw,4.5rem)}}
+@media(max-width:620px){.hero{padding:76px 0 38px}.visual{display:block;min-height:385px}.mini{width:min(390px,92vw);height:380px}.workspace{transform:scale(.68);margin-top:58px}.desk{inset:56px 12px 18px}.bubble{display:none}.hero h1{font-size:2.55rem}.role{font-size:1rem}.art-board{grid-template-columns:1fr;padding:18px;border-radius:34px}.art-piece.large{grid-row:auto}.outside-art .interest-card{padding:28px}.techgrid{grid-template-columns:1fr 1fr}.tech{min-height:84px;padding:14px;border-radius:20px}.tech small{display:none}}
+
+/* requested update: compact hero on tablet, uncropped outside-work title, contact actions */
+@media(max-width:930px) and (min-width:761px){
+  .hero{min-height:100svh;padding:70px 0 30px;}
+  .hero-grid{grid-template-columns:minmax(0,1.04fr) minmax(260px,.72fr);gap:18px;align-items:center;}
+  .hero h1{font-size:clamp(2.1rem,5.4vw,3.65rem);line-height:.98;margin-bottom:12px;}
+  .visual{display:grid;min-height:360px;}
+  .mini{width:min(360px,42vw);height:360px;}
+  .desk{inset:44px 12px 14px;border-radius:30px;}
+  .workspace{transform:scale(.61);transform-origin:center top;margin-top:42px;}
+  .bubble{font-size:.66rem;line-height:1.35;padding:9px 10px;border-radius:16px;max-width:188px;}
+  .bubble strong{font-size:.56rem;}
+  .btop{left:0;top:16px;}
+  .bbot{right:0;bottom:10px;max-width:182px;}
+  .w1{width:320px;height:215px;right:22px;top:48px;}
+  .w2{width:275px;height:210px;right:-18px;top:28px;}
+  .w3{width:210px;height:160px;left:20px;bottom:58px;}
+}
+@media(max-width:760px){
+  .hero{min-height:auto;padding:76px 0 42px;}
+  .hero-grid{grid-template-columns:1fr;}
+  .hero .visual{display:none;}
+}
+.outside-art .title{font-size:clamp(2rem,4.05vw,4.15rem);line-height:1.05;letter-spacing:-.052em;overflow:visible;}
+.outside-art .interest-card{overflow:visible;}
+@media(max-width:930px){
+  .outside-art .title{font-size:clamp(2.25rem,7vw,3.85rem);line-height:1.06;}
+}
+@media(max-width:620px){
+  .outside-art .title{font-size:2.28rem;line-height:1.08;}
+  .contact-actions{display:grid;grid-template-columns:1fr;justify-content:stretch;}
+  .contact-actions .email,.contact-actions .linkedin{justify-content:center;width:100%;}
+}
+
+
+/* final responsive corrections: hero side-by-side + outside-work crop fix */
+.hero{min-height:100svh;padding:68px 0 30px;display:grid;align-items:center;overflow:hidden}
+.hero-grid{grid-template-columns:minmax(0,1fr) minmax(320px,.84fr);gap:clamp(18px,3.1vw,42px);align-items:center}
+.hero h1{font-size:clamp(2.42rem,4.35vw,5.35rem);line-height:.955;letter-spacing:-.062em;max-width:760px;margin-bottom:16px}
+.visual{min-height:clamp(390px,43vw,510px);align-self:center;overflow:visible}
+.mini{width:min(470px,100%);height:clamp(390px,42vw,500px)}
+.desk{inset:58px 24px 22px;border-radius:38px}
+.workspace{transform:scale(.78);transform-origin:center top;margin-top:54px}
+.bubble{font-size:.78rem;line-height:1.45;padding:12px 14px;border-radius:20px;max-width:242px}
+.btop{left:2px;top:28px}.bbot{right:2px;bottom:18px;max-width:234px}
+@media(max-width:1080px){.hero{padding:66px 0 28px}.hero-grid{grid-template-columns:minmax(0,1fr) minmax(285px,.76fr);gap:18px}.hero h1{font-size:clamp(2.25rem,4.15vw,3.95rem);line-height:.97;max-width:610px}.visual{min-height:385px}.mini{width:min(388px,100%);height:392px}.workspace{transform:scale(.66);margin-top:48px}.desk{inset:52px 16px 18px}.bubble{font-size:.68rem;max-width:205px}.btop{top:22px}.bbot{bottom:12px;max-width:205px}.w1{width:330px;height:230px;right:28px;top:44px}.w2{width:286px;height:220px;right:-10px;top:24px}.w3{width:225px;height:172px;left:20px;bottom:52px}}
+@media(max-width:760px){.hero{min-height:auto;padding:76px 0 38px;overflow:visible}.hero-grid{grid-template-columns:1fr}.hero h1{font-size:clamp(2.45rem,9vw,3.45rem);max-width:100%}.visual{min-height:375px}.mini{width:min(390px,92vw);height:380px;margin:auto}.workspace{transform:scale(.68);margin-top:58px}.desk{inset:56px 12px 18px}.bubble{display:none}}
+@media(max-width:620px){.techgrid{grid-template-columns:1fr 1fr}.visual{display:block}}
+#outside{overflow:visible}.outside-art{align-items:stretch}.outside-art .interest-card{overflow:visible;justify-content:flex-start;min-height:auto}.outside-art .title{font-size:clamp(2.05rem,4.65vw,4.6rem);line-height:1.04;letter-spacing:-.058em;padding-bottom:.08em;overflow:visible}.outside-art .copy{max-width:680px}.contact-actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:flex-end}.linkedin{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:14px 20px;background:rgba(255,255,255,.1);color:#fff;font-weight:780}.linkedin:hover{background:rgba(255,255,255,.16)}@media(max-width:930px){.contact-actions{justify-content:flex-start;margin-top:18px}}
+
+/* outside work content refinement */
+.outside-art .copy{line-height:1.68;}
+.art-board{grid-auto-rows:minmax(108px,auto);}
+.art-piece.metaphysics{grid-column:span 2;background:linear-gradient(135deg,rgba(255,255,255,.78),rgba(184,168,255,.18),rgba(243,191,208,.12));}
+.art-piece.metaphysics span{max-width:620px;}
+@media(max-width:620px){.art-piece.metaphysics{grid-column:auto}.art-board{grid-auto-rows:auto}}
+
+/* requested update: simpler profile-and-expertise hero visual */
+.expertise-mini{
+  width:min(455px,100%);
+  height:auto;
+  min-height:420px;
+  display:grid;
+  place-items:center;
+  margin:auto;
+}
+.expertise-card{
+  position:relative;
+  z-index:2;
+  width:min(430px,100%);
+  border-radius:38px;
+  padding:26px;
+  background:linear-gradient(145deg,rgba(255,255,255,.88),rgba(247,245,252,.9));
+  border:1px solid rgba(255,255,255,.86);
+  box-shadow:var(--shadow);
+  overflow:hidden;
+}
+.expertise-card:before{
+  content:"";
+  position:absolute;
+  right:-80px;
+  top:-95px;
+  width:235px;
+  height:235px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(184,168,255,.38),rgba(185,217,245,.18),transparent 72%);
+}
+.expertise-head{
+  position:relative;
+  display:grid;
+  grid-template-columns:auto 1fr;
+  gap:16px;
+  align-items:center;
+  margin-bottom:22px;
+}
+.expertise-avatar{
+  width:76px;
+  height:76px;
+  border-radius:26px;
+  display:grid;
+  place-items:center;
+  background:#11142b;
+  color:#fff;
+  box-shadow:0 16px 38px rgba(17,20,43,.18);
+}
+.expertise-avatar iconify-icon{font-size:2.35rem}
+.expertise-head span{
+  display:block;
+  margin-bottom:6px;
+  font-size:.72rem;
+  text-transform:uppercase;
+  letter-spacing:.16em;
+  color:var(--lav);
+  font-weight:850;
+}
+.expertise-head strong{
+  display:block;
+  font-size:1.3rem;
+  letter-spacing:-.03em;
+}
+.expertise-head p{
+  margin:6px 0 0;
+  color:var(--copy);
+  line-height:1.45;
+  font-size:.9rem;
+}
+.expertise-list{
+  position:relative;
+  display:grid;
+  gap:10px;
+}
+.expertise-list article{
+  display:grid;
+  grid-template-columns:auto 1fr;
+  gap:13px;
+  align-items:center;
+  min-height:74px;
+  padding:14px;
+  border-radius:22px;
+  background:rgba(255,255,255,.72);
+  border:1px solid rgba(255,255,255,.86);
+  box-shadow:0 10px 26px rgba(36,40,76,.05);
+}
+.expertise-list iconify-icon{
+  font-size:1.6rem;
+  color:var(--lav);
+}
+.expertise-list strong{
+  display:block;
+  font-size:.95rem;
+  letter-spacing:-.015em;
+}
+.expertise-list small{
+  display:block;
+  margin-top:4px;
+  color:#7a7f9d;
+  line-height:1.35;
+  font-size:.78rem;
+}
+.expertise-note{
+  position:relative;
+  margin-top:14px;
+  padding:17px 18px;
+  border-radius:24px;
+  background:linear-gradient(135deg,rgba(129,112,216,.12),rgba(185,217,245,.16));
+  border:1px solid rgba(129,112,216,.14);
+}
+.expertise-note strong{
+  display:block;
+  margin-bottom:6px;
+  font-size:.74rem;
+  text-transform:uppercase;
+  letter-spacing:.15em;
+  color:var(--lav);
+}
+.expertise-note p{
+  margin:0;
+  color:#303552;
+  line-height:1.48;
+  font-size:.9rem;
+}
+@media(max-width:1080px){
+  .expertise-mini{min-height:360px;width:min(360px,100%)}
+  .expertise-card{padding:20px;border-radius:30px}
+  .expertise-head{grid-template-columns:1fr;gap:12px;margin-bottom:16px}
+  .expertise-avatar{width:58px;height:58px;border-radius:20px}
+  .expertise-avatar iconify-icon{font-size:1.9rem}
+  .expertise-head strong{font-size:1.1rem}
+  .expertise-head p{font-size:.82rem}
+  .expertise-list article{min-height:64px;padding:12px;border-radius:18px}
+  .expertise-list small{font-size:.72rem}
+  .expertise-note{padding:14px;border-radius:20px}
+}
+@media(max-width:760px){
+  .expertise-mini{width:min(390px,92vw);min-height:auto}
+}
+@media(max-width:620px){
+  .expertise-card{padding:18px}
+  .expertise-list article{grid-template-columns:auto 1fr}
+  .expertise-note p{font-size:.84rem}
+}
+
+
+/* ensure simplified hero visual stays visible on small screens */
+@media(max-width:760px){
+  .hero .visual{display:grid;min-height:auto;margin-top:18px}
+  .hero .expertise-mini{width:min(390px,92vw)}
+}
+@media(max-width:620px){
+  .hero .visual{display:grid}
+}
+
+</style>
+</head>
+<body><div class="progress" id="progress"></div><header class="nav" id="nav"><div class="navin"><a class="brand" href="#top">Michelle</a><nav class="links"><a href="#profile">Profile</a><a href="#experience">Experience</a><a href="#work">Top 5</a><a href="#stack">Stack</a><a href="#outside">Outside Work</a><a href="#contact">Contact</a></nav></div></header>
+<main id="top">
+<section class="hero"><div class="wrap hero-grid"><div class="reveal"><h1>I build products by recognizing <span class="soft">patterns, structuring complexity,</span> and turning ideas into <span class="soft">practical</span>, scalable solutions</h1><div class="role"></div><div class="actions"><a class="button" href="#work">View Top 5 Projects <span class="arrow">→</span></a><a class="textlink" href="#experience">Experience <span class="arrow">↓</span></a></div></div><div class="visual reveal"><div class="wash w1" data-parallax="-.035"></div><div class="wash w2" data-parallax=".024"></div><div class="wash w3" data-parallax="-.018"></div></div></div></section>
+
+<section class="profile" id="profile"><div class="wrap"><div class="profile-panel reveal"><div class="profile-layout"><div class="profile-intro"><p class="eyebrow">Profile</p><h2>Michelle, in practice.</h2><p>Production iOS background, IT analysis experience, product-facing delivery, and creative discipline. The portfolio is built around how I recognize patterns, structure complexity, and turn unclear ideas into practical systems.</p><div class="profile-chips"><span>iOS Developer</span><span>IT Analyst</span><span>Product-minded</span><span>Creative systems thinker</span></div></div><div class="profile-grid"><article class="profile-item"><iconify-icon icon="ph:device-mobile-camera"></iconify-icon><strong>Core background</strong><span>Mobile banking technology</span><p>iOS delivery, feature work, production support, and 50+ delivered projects across enhancements and system improvements.</p></article><article class="profile-item"><iconify-icon icon="ph:target"></iconify-icon><strong>Working focus</strong><span>Patterns, people, systems</span><p>Bridging software engineering, product thinking, cross-functional communication, and process improvement.</p></article><article class="profile-item"><iconify-icon icon="ph:brain"></iconify-icon><strong>Current direction</strong><span>AI learning + human behavior</span><p>Using the transition period to study AI, creative practice, and alternative frameworks for understanding decision-making.</p></article><article class="profile-item"><iconify-icon icon="ph:paper-plane-tilt"></iconify-icon><strong>Contact</strong><span><a class="profile-link" href="mailto:michelle.m.my@hotmail.com">michelle.m.my@hotmail.com</a></span><p><a class="profile-link" href="https://id.linkedin.com/in/michelle-mmy" target="_blank" rel="noopener">LinkedIn profile</a></p></article></div></div></div></div></section>
+
+<section id="experience"><div class="wrap"><div class="section-head reveal"><div><p class="eyebrow">Experience</p><h2 class="title">The path so far</h2></div></div><div class="timeline-card reveal"><div class="chapter-tag" id="tk"></div><div class="year" id="ty"></div><h3 id="tt"></h3><p id="tb"></p></div><div class="rail reveal" id="rail"></div></div></section>
+
+<section class="work" id="work"><div class="wrap"><div class="section-head reveal"><div><p class="eyebrow">Top 5 Projects</p><h2 class="title">A few of my favorites</h2></div><div class="case-controls"><button aria-label="Previous project" id="prev">‹</button><button aria-label="Next project" id="next">›</button></div></div><div class="carousel reveal" id="carousel"></div></div></section>
+<section id="stack"><div class="wrap"><div class="reveal"><p class="eyebrow">Tech Stack</p><h2 class="title">The stack behind the work.</h2><p class="copy"></p><div class="filters" id="filters"></div></div><div class="techgrid reveal" id="techgrid"></div></div></section>
+<section id="outside"><div class="wrap outside-art"><div class="interest-card reveal"><p class="eyebrow">Outside Work</p><h2 class="title">Creative balance beyond technical work.</h2><p class="copy">My core work is structured and technical: systems, code, analysis, and delivery. Outside work, I balance that logic-heavy rhythm with right-brain practices that train visual judgment, intuition, empathy, and pattern awareness.</p><div class="art-tags"><span>right-brain practice</span><span>visual judgment</span><span>pattern awareness</span><span>human behavior</span><span>creative reset</span></div></div><div aria-label="Creative interests collage" class="art-board reveal"><div class="brush b-lav"></div><div class="brush b-pink"></div><article class="art-piece large"><iconify-icon icon="ph:moon-stars"></iconify-icon><strong>Metaphysics</strong><span>BaZi &amp; Human Design as reflective frameworks for timing, character, and decision patterns</span></article><article class="art-piece"><iconify-icon icon="ph:pencil-line"></iconify-icon><strong>Sketching</strong><span>line, proportion, observation</span></article><article class="art-piece"><iconify-icon icon="ph:paint-brush-broad"></iconify-icon><strong>Watercolor</strong><span>soft color, patience, layering</span></article><article class="art-piece"><iconify-icon icon="ph:mountains"></iconify-icon><strong>Nature</strong><span>pattern, quiet, reset</span></article><article class="art-piece"><iconify-icon icon="ph:sparkle"></iconify-icon><strong>Reflection</strong><span>meaning, behavior, context</span></article><article class="art-piece metaphysics"><iconify-icon icon="ph:flower-lotus"></iconify-icon><strong>Flower arranging</strong><span>balance, negative space</span></article></div></div></section>
+<section id="contact"><div class="wrap"><div class="contact-card reveal"><div><p class="eyebrow" style="color:#b8a8ff">Contact</p><h2 class="title">Michelle</h2><p>iOS background, product-facing delivery, creative practice, and transitioning into broader technology work with AI.</p></div><div class="contact-actions"><a class="email" href="mailto:michelle.m.my@hotmail.com"><iconify-icon icon="ph:envelope-simple"></iconify-icon> michelle.m.my@hotmail.com</a><a class="linkedin" href="https://id.linkedin.com/in/michelle-mmy" target="_blank" rel="noopener"><iconify-icon icon="simple-icons:linkedin"></iconify-icon> LinkedIn</a></div></div></div></section>
+</main><footer class="footer"><div class="wrap">Michelle · Portfolio</div></footer>
+<script>
+const timeline=[{"k": "First iOS Build", "y": "2018", "t": "Context-Aware Family Tracking App", "b": "Built a family tracking app as a final project during college days while learning Swift through independent practice, setting the foundation for iOS development."}, {"k": "Joined BCA", "y": "2019", "t": "Production iOS work on myBCA", "b": "Joined Bank Central Asia and worked on the myBCA mobile iOS project, contributing across software engineering into product thinking, production delivery, cross-functional collaboration, and process improvement."}, {"k": "Scaled myBCA", "y": "2021 — 2023", "t": "Building Systems, Leading People", "b": "While continuing to develop features for the myBCA iOS app, I stepped into a leadership role—coordinating delivery, mentoring teammates, improving engineering practices, and contributing to the application’s modular architecture for long-term scalability."}, {"k": "Step New Role", "y": "2024", "t": "Connecting Strategy with Execution", "b": "Moving into an IT Analyst role allowed me to work beyond implementation. I collaborated across business and engineering teams to deliver the myBCA app redesign and extend the banking experience to Apple Watch, ensuring technical feasibility aligned with product vision."}, {"k": "Career Break", "y": "Oct 2025 — Present", "t": "Recharge, reset, and re-scope", "b": "Resigned from BCA for a career break after years in banking technology to recharge and invest in personal transition. This period is used to reset direction, strengthen creative practice, and explore AI as the next layer of practical technology work. Also exploring alternative frameworks for understanding human behavior and decision-making."}];
+const projects=[{"y": "2022", "icon": "ph:fingerprint", "t": "Native Biometric Authentication", "sub": "Hardening App Security", "parts": { "Situation": "To enhance both security and user convenience, the application introduced native biometric authentication as an alternative login method, requiring banking-grade reliability and compatibility across the diverse iOS device ecosystem.", "Task": "Lead the analysis and implementation strategy for native biometric authentication, ensuring secure encryption, consistent user experience, and compatibility across multiple hardware generations.", "Action": "Defined the biometric authentication framework, evaluated secure encryption approaches, and identified device-specific edge cases that could affect authentication consistency, enabling proactive improvements before production release.", "Result": "Successfully delivered a secure and reliable native biometric login experience that strengthened application security, improved user convenience, and maintained stable performance across supported iOS devices." }}, {"y": "2022", "icon": "ph:lifebuoy", "t": "Partial Update", "sub": "Enabling Flexible Feature Rollouts", "parts": {"Situation": "The application required a partial update mechanism to support feature versioning and enable in-app updates without requiring users to install a new release from the App Store.", "Task": "Design and implement a reliable partial update framework that could safely manage feature compatibility while ensuring a seamless user experience.", "Action": "Developed the partial update implementation and identified a potential edge case where a failed version inquiry during fresh installation could block application access. To mitigate this, I introduced a fallback baseline version within the client, ensuring the update mechanism remained resilient under network instability.", "Result": "Successfully enabled flexible in-app feature rollouts while eliminating a critical onboarding failure point, improving both platform reliability and the first-time user experience."}}, {"y": "2023", "icon": "ph:cube-focus", "t": "myBCA iOS Modularization", "sub": "Architecting for Scalability", "parts": {"Situation": "The myBCA iOS application had grown into a monolithic codebase, causing merge conflicts and slowing parallel development across multiple feature teams.", "Task": "Lead the transition to a modular architecture while maintaining ongoing feature delivery, enabling teams to develop independently without affecting system stability.", "Action": "Designed and implemented the modular workspace, extracted shared core components into a Main Module, validated the architecture through live development tracks, and established migration guidelines for the engineering team.", "Result": "Successfully launched the modular architecture with zero major post-release issues, significantly improving development efficiency, reducing code conflicts, and enabling independent feature development across teams."}}, {"y": "2024", "icon": "ph:paint-brush-broad", "t": "myBCA App Design Revamp", "sub": "Modernizing the User Experience", "parts": { "Situation": "The myBCA application underwent a major interface redesign to align with updated brand guidelines while preserving a familiar and seamless experience for millions of existing users.", "Task": "Coordinate the revamp implementation across design, business, and engineering teams, ensuring the new experience could be delivered without disrupting ongoing development or application stability.", "Action": "Facilitated implementation planning, managed the dedicated revamp development branch, and aligned cross-functional stakeholders to balance design objectives with technical feasibility and release stability.", "Result": "Successfully delivered the redesigned application with zero major impact on existing users while maintaining release stability and establishing a cleaner development workflow for parallel feature tracks." }}, {"y": "2024", "icon": "ph:watch", "t": "myBCA Smartwatch Integration", "sub": "Ecosystem Expansion", "parts": {"Situation": "To meet evolving customer lifestyles, BCA aimed to expand the myBCA ecosystem to wearable technology, specifically smartwatches, requiring a seamless multi-device handoff.", "Task": "Lead the smartwatch project from development phase in early 2024 through successful implementation and rollout by the end of the year.", "Action": "Managed the implementation roadmap and provided high-intensity support during the pilot phase to ensure that bugs discovered by early users were resolved immediately. Focused on stable and intuitive mobile-to-watch synchronization.", "Result": "Reached full implementation in Q4 2024 with high responsiveness to pilot feedback, extending the myBCA brand into a new device form factor and demonstrating interdisciplinary potential."}}];
+const tech=[["Languages", "Swift", "logos:swift", "https://www.swift.org/"], ["Languages", "SwiftUI", "simple-icons:swift", "https://developer.apple.com/xcode/swiftui/"], ["Languages", "SQL", "tabler:sql", "https://www.w3schools.com/sql/"], ["Languages", "NoSQL", "simple-icons:mongodb", "https://www.mongodb.com/resources/basics/databases/nosql-explained"], ["Languages", "Java", "logos:java", "https://www.java.com/"], ["Languages", "Kotlin", "logos:kotlin-icon", "https://kotlinlang.org/"], ["Languages", "Python", "logos:python", "https://www.python.org/"], ["Languages", "HTML", "logos:html-5", "https://developer.mozilla.org/en-US/docs/Web/HTML"], ["Languages", "CSS", "logos:css-3", "https://developer.mozilla.org/en-US/docs/Web/CSS"], ["Languages", "JavaScript", "logos:javascript", "https://developer.mozilla.org/en-US/docs/Web/JavaScript"], ["Mobile", "UIKit", "simple-icons:apple", "https://developer.apple.com/documentation/uikit"], ["Mobile", "RxSwift", "simple-icons:reactivex", "https://github.com/ReactiveX/RxSwift"], ["Mobile", "Alamofire", "ph:flame", "https://github.com/Alamofire/Alamofire"], ["Mobile", "Moya", "ph:network", "https://github.com/Moya/Moya"], ["Mobile", "RealmDB", "logos:realm", "https://realm.io/"], ["Backend & Services", "Firebase", "logos:firebase", "https://firebase.google.com/"], ["Backend & Services", "REST API", "carbon:api-1", "https://www.redhat.com/en/topics/api/what-is-a-rest-api"], ["Architecture", "MVVM", "material-symbols:view-module-outline", "https://learn.microsoft.com/en-us/dotnet/architecture/maui/mvvm"], ["Architecture", "Modular Architecture", "material-symbols:account-tree-outline", "https://developer.apple.com/documentation/swift/managing-a-modular-codebase"], ["Data & Analytics", "Elasticsearch", "logos:elasticsearch", "https://www.elastic.co/elasticsearch"], ["Data & Analytics", "Kibana", "logos:kibana", "https://www.elastic.co/kibana"], ["Data & Analytics", "Dynatrace", "simple-icons:dynatrace", "https://www.dynatrace.com/"], ["Data & Analytics", "AppsFlyer", "simple-icons:appsflyer", "https://www.appsflyer.com/"], ["Tools", "Xcode", "devicon:xcode", "https://developer.apple.com/xcode/"], ["Tools", "Git", "logos:git-icon", "https://git-scm.com/"], ["Tools", "Figma", "logos:figma", "https://www.figma.com/"], ["Tools", "Sketch", "logos:sketch", "https://www.sketch.com/"], ["Tools", "Postman", "logos:postman-icon", "https://www.postman.com/"], ["Tools", "VS Code", "logos:visual-studio-code", "https://code.visualstudio.com/"], ["Tools", "SonarQube", "simple-icons:sonarqube", "https://www.sonarsource.com/products/sonarqube/"], ["Tools", "SwiftLint", "simple-icons:swift", "https://github.com/realm/SwiftLint"], ["Workflow", "Agile", "material-symbols:cycle", "https://www.atlassian.com/agile"], ["Workflow", "Human-Centered Design", "material-symbols:accessibility-new", "https://www.ideo.com/blog/what-is-human-centered-design"], ["Workflow", "Scrum", "material-symbols:groups-outline", "https://scrumguides.org/"], ["Workflow", "Jira", "logos:jira", "https://www.atlassian.com/software/jira"], ["Currently Exploring", "AI", "material-symbols:psychology-outline", "https://www.ibm.com/topics/artificial-intelligence"], ["Currently Exploring", "LLMs", "material-symbols:neurology-outline", "https://www.ibm.com/topics/large-language-models"], ];
+const nav=document.getElementById('nav'),prog=document.getElementById('progress'),rev=document.querySelectorAll('.reveal'),para=document.querySelectorAll('[data-parallax]');const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12,rootMargin:'0px 0px -8% 0px'});rev.forEach(e=>io.observe(e));function scrollFx(){const y=scrollY,h=document.documentElement.scrollHeight-innerHeight;nav.classList.toggle('on',y>12);prog.style.width=(h>0?y/h*100:0)+'%';para.forEach(e=>e.style.transform=`translate3d(0,${y*parseFloat(e.dataset.parallax||0)}px,0)`)}addEventListener('scroll',scrollFx,{passive:true});scrollFx();
+const rail=document.getElementById('rail'),tk=document.getElementById('tk'),ty=document.getElementById('ty'),tt=document.getElementById('tt'),tb=document.getElementById('tb');function setT(i){let x=timeline[i];document.querySelectorAll('.tab').forEach((b,n)=>b.classList.toggle('active',n===i));tk.textContent=x.k;ty.textContent=x.y;tt.textContent=x.t;tb.textContent=x.b;rail.children[i]?.scrollIntoView({behavior:'smooth',inline:'center',block:'nearest'})}timeline.forEach((x,i)=>{let b=document.createElement('button');b.className='tab';b.innerHTML=`<strong>${x.k}</strong><span>${x.y}</span>`;b.onclick=()=>setT(i);rail.appendChild(b)});setT(0);
+const carousel=document.getElementById('carousel');let active=0;function setStar(card,key){card.querySelectorAll('.star-tab').forEach(x=>x.classList.toggle('active',x.dataset.key===key));card.querySelector('.star-body').innerHTML=`<strong>${key}</strong><p>${projects[+card.dataset.index].parts[key]}</p>`}function activate(i,scroll=true){active=(i+projects.length)%projects.length;document.querySelectorAll('.case').forEach((c,n)=>{c.classList.toggle('active',n===active);if(n===active)setStar(c,'Situation')});if(scroll)carousel.children[active]?.scrollIntoView({behavior:'smooth',inline:'center',block:'nearest'})}projects.forEach((p,i)=>{let card=document.createElement('article');card.className='case';card.dataset.index=i;card.innerHTML=`<div class="case-top"><div><div class="num">${String(i+1).padStart(2,'0')}</div><div class="case-year">${p.y}</div></div><div class="case-icon"><iconify-icon icon="${p.icon}"></iconify-icon></div></div><h3>${p.t}</h3><p class="sub">${p.sub}</p><div class="detail"><div class="star-tabs">${Object.keys(p.parts).map(k=>`<button class="star-tab" data-key="${k}">${k}</button>`).join('')}</div><div class="star-body"></div></div>`;card.onclick=e=>{if(!e.target.classList.contains('star-tab'))activate(i,true)};card.querySelectorAll('.star-tab').forEach(btn=>btn.onclick=e=>{e.stopPropagation();setStar(card,btn.dataset.key)});carousel.appendChild(card)});document.getElementById('prev').onclick=()=>activate(active-1,true);document.getElementById('next').onclick=()=>activate(active+1,true);activate(0,false);
+const cats=['All',...new Set(tech.map(t=>t[0]))],filters=document.getElementById('filters'),grid=document.getElementById('techgrid');cats.forEach((c,i)=>{let b=document.createElement('button');b.className='filter'+(i?'':' active');b.textContent=c;b.onclick=()=>{document.querySelectorAll('.filter').forEach(x=>x.classList.remove('active'));b.classList.add('active');document.querySelectorAll('.tech').forEach(card=>card.classList.toggle('hide',c!=='All'&&card.dataset.cat!==c))};filters.appendChild(b)});tech.forEach(([cat,name,icon,href])=>{let a=document.createElement('a');a.className='tech';a.href=href;a.target='_blank';a.rel='noopener';a.dataset.cat=cat;a.innerHTML=`<iconify-icon icon="${icon}"></iconify-icon><span>${name}</span><small>${cat}</small>`;grid.appendChild(a)});
+</script></body></html>
